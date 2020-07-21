@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Quattrocento:wght@400;700&family=Sail&display=swap');
+
+$title-font:'Sail', cursive;
+$font1: 'Quattrocento', serif;
+$font2: 'Fanwood Text', serif;
+
+* {
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background{
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    z-index: -2;
+    object-fit: cover;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+}
+
+.first-section{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes animatecadre{
+    0%{
+        transform: rotate(10deg) scale(0.8);
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+        }
+}
+@keyframes animateA{
+    0%{
+        transform: translateX(-10%);
+        opacity: 0;
+        }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+        }
+}
+@keyframes animateB{
+    0%{
+        opacity: 0;
+        }
+    100%{
+        opacity: 1;
+        }
+}
+@keyframes animateC{
+    0%{
+        transform: translateX(10%);
+        opacity: 0;
+        }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+        }
+}
+
+svg{
+    height: 100%;
+    z-index: -2;
+}
+
+#frame{
+    opacity: 0;
+    animation: animatecadre 1s 1s linear forwards;
+}
+#annaelle{
+    opacity: 0;
+    animation: animateA 0.5s 2s linear forwards;
+}
+#kévin{
+    opacity: 0;
+    animation: animateC 0.5s 2s linear forwards;
+}
+#et{
+    opacity: 0;
+    animation: animateB 0.5s 2s linear forwards;
+}
+
+.title{
+    font-family: $title-font;
+    font-weight: normal;
+    font-size: 10vh;
+}
+.a{
+    color: rgb(241, 160, 198);
+    position: absolute;
+    margin: auto;
+    left: -25%;
+    right: 0;
+    text-align: center;
+    top: 40%;
+}
+
+.second-section{
+    width: 100%;
+    background-color: white;
+}

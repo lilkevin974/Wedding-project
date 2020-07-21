@@ -1,0 +1,182 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Quattrocento:wght@400;700&family=Sail&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.background {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+}
+
+.first-section {
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  opacity: 0.7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@-webkit-keyframes animatecadre {
+  0% {
+    -webkit-transform: rotate(10deg) scale(0.8);
+            transform: rotate(10deg) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes animatecadre {
+  0% {
+    -webkit-transform: rotate(10deg) scale(0.8);
+            transform: rotate(10deg) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animateA {
+  0% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animateA {
+  0% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animateB {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animateB {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animateC {
+  0% {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animateC {
+  0% {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+svg {
+  height: 100%;
+  z-index: -2;
+}
+
+#frame {
+  opacity: 0;
+  -webkit-animation: animatecadre 1s 1s linear forwards;
+          animation: animatecadre 1s 1s linear forwards;
+}
+
+#annaelle {
+  opacity: 0;
+  -webkit-animation: animateA 0.5s 2s linear forwards;
+          animation: animateA 0.5s 2s linear forwards;
+}
+
+#kévin {
+  opacity: 0;
+  -webkit-animation: animateC 0.5s 2s linear forwards;
+          animation: animateC 0.5s 2s linear forwards;
+}
+
+#et {
+  opacity: 0;
+  -webkit-animation: animateB 0.5s 2s linear forwards;
+          animation: animateB 0.5s 2s linear forwards;
+}
+
+.title {
+  font-family: "Sail", cursive;
+  font-weight: normal;
+  font-size: 10vh;
+}
+
+.a {
+  color: #f1a0c6;
+  position: absolute;
+  margin: auto;
+  left: -25%;
+  right: 0;
+  text-align: center;
+  top: 40%;
+}
+
+.second-section {
+  width: 100%;
+  background-color: white;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,11 +1,19 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notre Mariage</title>
+    <link rel="stylesheet" href="{% static 'main/style/main.css' %}">
 </head>
 <body>
-    
+    <img src="{% static 'main/images/background.png' %}" alt="" class="background">
+    <section class="first-section">  
+        {% include 'main/svg.html' %}    
+    </section>
+    <section class="second-section">
+    </section>
 </body>
 </html>

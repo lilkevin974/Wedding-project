@@ -177,6 +177,68 @@ svg {
 
 .second-section {
   width: 100%;
+  height: 130vh;
   background-color: white;
+  padding: 10vw 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.second-section .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.second-section .info .description {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.second-section .info .description h2 {
+  font-family: "Quattrocento", serif;
+  padding: 0.5em 0;
+}
+
+.second-section .info .description p {
+  font-family: "Fanwood Text", serif;
+}
+
+.second-section .info img {
+  width: 30%;
+  -webkit-box-shadow: rgba(90, 178, 179, 0.49) -15px -15px;
+          box-shadow: rgba(90, 178, 179, 0.49) -15px -15px;
+}
+
+.second-section .blue img {
+  width: 25%;
+  -webkit-box-shadow: rgba(90, 178, 179, 0.49) -15px -15px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
+          box-shadow: rgba(90, 178, 179, 0.49) -15px -15px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
+}
+
+.second-section .pink img {
+  margin-left: -5%;
+  width: 30%;
+  -webkit-box-shadow: rgba(247, 170, 206, 0.4) 15px -15px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
+          box-shadow: rgba(247, 170, 206, 0.4) 15px -15px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
 }
 /*# sourceMappingURL=main.css.map */

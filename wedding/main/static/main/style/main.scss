@@ -109,5 +109,44 @@ svg{
 
 .second-section{
     width: 100%;
+    height: 130vh;
     background-color: white;
+    padding:10vw 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .info{
+        display: flex;
+        justify-content: space-around;
+        height: max-content;
+        .description{
+            width:30%;
+            display: flex;
+            flex-direction: column;
+            h2{
+                font-family: $font1;
+                padding:0.5em 0;
+            }
+            p{
+                font-family: $font2;
+            }
+        }
+        img{
+            width:30%;
+            box-shadow: rgba(90, 178, 179, 0.49) -15px -15px;
+        }      
+    }
+   .blue{
+        img{
+            width:25%;
+            box-shadow: rgba(90, 178, 179, 0.49) -15px -15px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
+        }  
+   } 
+   .pink{
+        img{
+            margin-left: -5%;
+            width:30%;
+            box-shadow: rgba(247, 170, 206, 0.4) 15px -15px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
+        }  
+   } 
 }

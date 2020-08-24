@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notre Mariage</title>
-    <link rel="stylesheet" href="{% static 'main/style/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/style/main.css' %}"> 
+    
+    
 </head>
 <body>
     <img src="{% static 'main/images/background.png' %}" alt="" class="background">
@@ -14,6 +16,24 @@
         {% include 'main/svg.html' %}    
     </section>
     <section class="second-section">
+        <div class="info blue">
+            <img src="{% static 'main/images/photo1.png' %}">
+            <div class="description">
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu, in malesuada feugiat ut dictum. Vulputate ornare ultricies nunc pharetra adipiscing urna, posuere.</p>
+            </div>
+        </div>
+        <div class="info pink">
+            <div class="description">
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu, in malesuada feugiat ut dictum. Vulputate ornare ultricies nunc pharetra adipiscing urna, posuere.</p>
+            </div>
+            <img src="{% static 'main/images/photo2.png' %}">
+            
+        </div>
     </section>
+    <script type="text/javascript" src="{% static 'main/js/main.js' %}"></script>
+
 </body>
 </html>
+    

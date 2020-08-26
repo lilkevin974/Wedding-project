@@ -7,33 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notre Mariage</title>
     <link rel="stylesheet" href="{% static 'main/style/main.css' %}"> 
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
 </head>
+
+
+
 <body>
-    <img src="{% static 'main/images/background.png' %}" alt="" class="background">
+    <!-- <img src="{% static 'main/images/background.png' %}" alt="" class="background"> -->
     <section class="first-section">  
         {% include 'main/svg.html' %}    
     </section>
     <section class="second-section">
         <div class="info blue">
-            <img src="{% static 'main/images/photo1.png' %}">
-            <div class="description">
+            <img src="{% static 'main/images/photo1.png' %}" data-aos="fade-right">
+            <div class="description" data-aos="fade-left">
                 <h2>Lorem Ipsum</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu, in malesuada feugiat ut dictum. Vulputate ornare ultricies nunc pharetra adipiscing urna, posuere.</p>
             </div>
         </div>
         <div class="info pink">
-            <div class="description">
+            <div class="description" data-aos="fade-right">
                 <h2>Lorem Ipsum</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu, in malesuada feugiat ut dictum. Vulputate ornare ultricies nunc pharetra adipiscing urna, posuere.</p>
             </div>
-            <img src="{% static 'main/images/photo2.png' %}">
-            
+            <img src="{% static 'main/images/photo2.png' %}" data-aos="fade-left">
         </div>
     </section>
+    <section class="third-section">
+
+    </section>
+    
     <script type="text/javascript" src="{% static 'main/js/main.js' %}"></script>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });   
+    </script>
 </body>
 </html>
     

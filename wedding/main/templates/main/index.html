@@ -35,12 +35,41 @@
         </div>
     </section>
     <section class="third-section">
-        <div class="registration" data-aos="slide-up">
+        <div class="registration" data-aos="slide-up" data-aos-easing="ease-in-out" data-aos-duration="1800">
+            <h1><span>Infos personnelles</span></h1>
             <div class="input-container">
-                <input placeholder="Adresse e-mail*" type="text" name="email" id="">
+                <input placeholder="Adresse e-mail*" type="text" name="email" id="email">
                 <label for="email" class='label'>Adresse e-mail*</label>
-            </div>    
+            </div>   
+            <div class="name-section">
+                <div class="input-container">
+                    <input placeholder="Nom*" type="text" name="nom" id="nom">
+                    <label for="nom" class='label'>Nom*</label>
+                </div>
+                <div class="input-container">
+                    <input placeholder="Prénom*" type="text" name="prénom" id="prénom">
+                    <label for="prénom" class='label'>Prénom*</label>
+                </div>
+            </div>
+            <h1><span>Nombre de personnes</span></h1>
+            <div class="presence-section">
+                <div class="input-container">
+                    <input placeholder="Adulte(s)*" type="number" name="adultes" min="1" id="adultes">
+                    <label for="adultes" class='label'>Adulte(s)*</label>
+                </div>
+                <div class="input-container">
+                    <input placeholder="Enfant(s)" type="number" min="0" name="enfants" id="enfants">
+                    <label for="enfants" class='label'>Enfant(s)</label>
+                </div>
+            </div>
+               <div class="input-container">
+                    <textarea placeholder="Message" rows="4" name="message" id="message"></textarea>
+                    <label for="message" class='label'>Message</label>
+                </div>
+                
+            <button class="btn btn--future">Confirmer votre présence</button>
         </div>
+        
     </section>
     
     <script type="text/javascript" src="{% static 'main/js/main.js' %}"></script>

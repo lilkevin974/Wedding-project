@@ -8,8 +8,15 @@ function confirmation(){
 	xhttp.open('POST', '/')
 	xhttp.setRequestHeader("X-CSRFToken",  getCookie('csrftoken')); 
 	xhttp.onload = () => {
-		const data = xhttp.responseText;
-		
+        const registration = document.querySelector(".registration");
+        const confirmation = document.querySelector(".confirmation")
+        registration.style.animation='scale-down .8s forwards'
+        registration.addEventListener('animationend', ()=> {
+            registration.style.display='none'
+            confirmation.style.display='flex'
+            confirmation.style.animation='scale-up .8s forwards'
+        })
+        
     }
     const data={};
     data.email=document.querySelector('#email').value;

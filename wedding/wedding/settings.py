@@ -108,6 +108,10 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
+#CSRF_COOKIE_SECURE = False
+#CSRF_COOKIE_HTTPONLY = False
+#SESSION_COOKIE_SECURE = False
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/

@@ -318,6 +318,48 @@ svg{
             }
         }
     }
+    .registration-hide{
+        animation: scale-down 2s forwards
+    }
+    @keyframes scale-down {
+        from{
+            transform: scaleY(100%) scaleX(100%);
+            opacity: 0.85;
+        }
+        to{
+            transform: scaleY(0%) scaleX(0%);
+            opacity: 0;
+        }
+    }
+    .confirmation{
+        width:50%;
+        height:70%;
+        background-color: white;
+        padding:1.5em 5%;
+        display: none;
+        transform: scaleX(0%) scaleY(0%);
+        position: relative;
+        img{
+            width:100%;
+            height: 100%;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+
+    }
+    @keyframes scale-up {
+        from{
+            transform: scaleY(0%) scaleX(0%);
+            opacity: 0; 
+        }
+        to{
+            transform: scaleY(100%) scaleX(100%);
+            opacity: 0.85;
+        }
+    }
+    
 }
 
 [aos="fade"] {

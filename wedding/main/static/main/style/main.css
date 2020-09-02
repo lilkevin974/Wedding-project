@@ -467,6 +467,84 @@ svg {
   border-color: rgba(90, 178, 179, 0.8);
 }
 
+.third-section .registration-hide {
+  -webkit-animation: scale-down 2s forwards;
+          animation: scale-down 2s forwards;
+}
+
+@-webkit-keyframes scale-down {
+  from {
+    -webkit-transform: scaleY(100%) scaleX(100%);
+            transform: scaleY(100%) scaleX(100%);
+    opacity: 0.85;
+  }
+  to {
+    -webkit-transform: scaleY(0%) scaleX(0%);
+            transform: scaleY(0%) scaleX(0%);
+    opacity: 0;
+  }
+}
+
+@keyframes scale-down {
+  from {
+    -webkit-transform: scaleY(100%) scaleX(100%);
+            transform: scaleY(100%) scaleX(100%);
+    opacity: 0.85;
+  }
+  to {
+    -webkit-transform: scaleY(0%) scaleX(0%);
+            transform: scaleY(0%) scaleX(0%);
+    opacity: 0;
+  }
+}
+
+.third-section .confirmation {
+  width: 50%;
+  height: 70%;
+  background-color: white;
+  padding: 1.5em 5%;
+  display: none;
+  -webkit-transform: scaleX(0%) scaleY(0%);
+          transform: scaleX(0%) scaleY(0%);
+  position: relative;
+}
+
+.third-section .confirmation img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes scale-up {
+  from {
+    -webkit-transform: scaleY(0%) scaleX(0%);
+            transform: scaleY(0%) scaleX(0%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scaleY(100%) scaleX(100%);
+            transform: scaleY(100%) scaleX(100%);
+    opacity: 0.85;
+  }
+}
+
+@keyframes scale-up {
+  from {
+    -webkit-transform: scaleY(0%) scaleX(0%);
+            transform: scaleY(0%) scaleX(0%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scaleY(100%) scaleX(100%);
+            transform: scaleY(100%) scaleX(100%);
+    opacity: 0.85;
+  }
+}
+
 [aos="fade"] {
   opacity: 0;
   -webkit-transition-property: opacity;

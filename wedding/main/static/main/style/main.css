@@ -7,15 +7,6 @@
           box-sizing: border-box;
 }
 
-.background {
-  width: 100%;
-  min-height: 100vh;
-  position: fixed;
-  z-index: -2;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 section {
   height: 100vh;
   width: 92%;
@@ -246,6 +237,83 @@ svg {
 }
 
 .third-section {
+  width: 100%;
+  height: 110vh;
+}
+
+.third-section .third-background {
+  width: 100%;
+  height: 70vh;
+  background-image: url("../images/pastelbackground.jpg");
+  position: relative;
+}
+
+.third-section .third-background h1 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-family: "Quattrocento", serif;
+  letter-spacing: 2px;
+}
+
+.third-section .third-background a {
+  position: absolute;
+  top: 70%;
+  font-size: 3rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.third-section .third-background .next {
+  right: 10%;
+}
+
+.third-section .third-background .prev {
+  left: 10%;
+}
+
+.third-section .third-background .slider {
+  width: 65%;
+  height: 100%;
+  background-color: white;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.third-section .third-background .slider .slide-image {
+  height: 100%;
+  width: 70%;
+  position: relative;
+  padding: 3.5em 3em;
+}
+
+.third-section .third-background .slider .slide-image img {
+  position: absolute;
+  width: 50%;
+  height: 75%;
+  margin: auto;
+  -o-object-fit: none;
+     object-fit: none;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  border-radius: 12px;
+}
+
+.third-section .third-background .slider .slide-image img.opaque {
+  opacity: 1;
+}
+
+.fourth-section {
   height: 100vh;
   background-color: white;
   opacity: 0.7;
@@ -262,7 +330,7 @@ svg {
   background-image: url("../images/Love.jpg");
 }
 
-.third-section .registration {
+.fourth-section .registration {
   width: 45%;
   height: 80%;
   background-color: white;
@@ -281,7 +349,7 @@ svg {
   visibility: visible !important;
 }
 
-.third-section .registration h1 {
+.fourth-section .registration h1 {
   font-size: 1rem;
   width: 100%;
   text-align: center;
@@ -290,22 +358,22 @@ svg {
   margin: 3em 0 1em;
 }
 
-.third-section .registration h1:first-of-type {
+.fourth-section .registration h1:first-of-type {
   margin-top: 1em;
 }
 
-.third-section .registration h1 span {
+.fourth-section .registration h1 span {
   background: #fff;
   padding: 0 10px;
 }
 
-.third-section .registration .input-container {
+.fourth-section .registration .input-container {
   position: relative;
   padding: 30px 0 0;
   width: 100%;
 }
 
-.third-section .registration .name-section {
+.fourth-section .registration .name-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,27 +383,27 @@ svg {
   width: 100%;
 }
 
-.third-section .registration .name-section .input-container {
+.fourth-section .registration .name-section .input-container {
   width: 40%;
 }
 
-.third-section .registration .presence-section {
+.fourth-section .registration .presence-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-.third-section .registration .presence-section .input-container {
+.fourth-section .registration .presence-section .input-container {
   width: 25%;
   margin-right: 3em;
 }
 
-.third-section .registration .presence-section .input-container input {
+.fourth-section .registration .presence-section .input-container input {
   text-align: center;
 }
 
-.third-section .registration label {
+.fourth-section .registration label {
   font-family: "Quattrocento", serif;
   font-weight: 700;
   -ms-flex-item-align: start;
@@ -349,7 +417,7 @@ svg {
   color: darkgray;
 }
 
-.third-section .registration input, .third-section .registration textarea {
+.fourth-section .registration input, .fourth-section .registration textarea {
   width: 100%;
   height: 2em;
   font-family: "Quattrocento", serif;
@@ -365,37 +433,37 @@ svg {
   transition: border-color 0.2s, height 0.2s;
 }
 
-.third-section .registration input::-webkit-input-placeholder, .third-section .registration textarea::-webkit-input-placeholder {
+.fourth-section .registration input::-webkit-input-placeholder, .fourth-section .registration textarea::-webkit-input-placeholder {
   color: transparent;
 }
 
-.third-section .registration input:-ms-input-placeholder, .third-section .registration textarea:-ms-input-placeholder {
+.fourth-section .registration input:-ms-input-placeholder, .fourth-section .registration textarea:-ms-input-placeholder {
   color: transparent;
 }
 
-.third-section .registration input::-ms-input-placeholder, .third-section .registration textarea::-ms-input-placeholder {
+.fourth-section .registration input::-ms-input-placeholder, .fourth-section .registration textarea::-ms-input-placeholder {
   color: transparent;
 }
 
-.third-section .registration input::placeholder, .third-section .registration textarea::placeholder {
+.fourth-section .registration input::placeholder, .fourth-section .registration textarea::placeholder {
   color: transparent;
 }
 
-.third-section .registration input:placeholder-shown ~ .label, .third-section .registration textarea:placeholder-shown ~ .label {
+.fourth-section .registration input:placeholder-shown ~ .label, .fourth-section .registration textarea:placeholder-shown ~ .label {
   font-size: 1rem;
   cursor: text;
   top: 30px;
 }
 
-.third-section .registration textarea {
+.fourth-section .registration textarea {
   height: 2.5em;
 }
 
-.third-section .registration textarea:focus {
+.fourth-section .registration textarea:focus {
   height: 4em;
 }
 
-.third-section .registration input:focus, .third-section .registration textarea:focus {
+.fourth-section .registration input:focus, .fourth-section .registration textarea:focus {
   font-weight: 700;
   border-width: 3px;
   -o-border-image: linear-gradient(to right, rgba(0, 0, 255, 0.25), rgba(255, 0, 0, 0.25));
@@ -404,7 +472,7 @@ svg {
   border-image-slice: 1;
 }
 
-.third-section .registration input:focus ~ .label, .third-section .registration textarea:focus ~ .label {
+.fourth-section .registration input:focus ~ .label, .fourth-section .registration textarea:focus ~ .label {
   position: absolute;
   top: 15px;
   display: block;
@@ -415,7 +483,7 @@ svg {
   font-weight: 700;
 }
 
-.third-section .registration .btn {
+.fourth-section .registration .btn {
   padding: .5em 2em;
   font-size: 1.5rem;
   cursor: pointer;
@@ -432,7 +500,7 @@ svg {
   transition: border-color 0.5s ease, color 0.5s ease;
 }
 
-.third-section .registration .btn--future::after, .third-section .registration .btn--future::before {
+.fourth-section .registration .btn--future::after, .fourth-section .registration .btn--future::before {
   content: "";
   position: absolute;
   border: 3px solid #f7aace;
@@ -442,32 +510,32 @@ svg {
   transition: 0.5s ease;
 }
 
-.third-section .registration .btn--future::after {
+.fourth-section .registration .btn--future::after {
   top: -15px;
   left: -15px;
   border-right: none;
   border-bottom: none;
 }
 
-.third-section .registration .btn--future::before {
+.fourth-section .registration .btn--future::before {
   bottom: -15px;
   right: -15px;
   border-left: none;
   border-top: none;
 }
 
-.third-section .registration .btn--future:hover:after, .third-section .registration .btn--future:hover:before {
+.fourth-section .registration .btn--future:hover:after, .fourth-section .registration .btn--future:hover:before {
   width: calc(100% - 30px);
   height: 80px;
   border-color: rgba(90, 178, 179, 0.8);
 }
 
-.third-section .registration .btn--future:hover {
+.fourth-section .registration .btn--future:hover {
   color: rgba(90, 178, 179, 0.8);
   border-color: rgba(90, 178, 179, 0.8);
 }
 
-.third-section .registration-hide {
+.fourth-section .registration-hide {
   -webkit-animation: scale-down 2s forwards;
           animation: scale-down 2s forwards;
 }
@@ -498,7 +566,7 @@ svg {
   }
 }
 
-.third-section .confirmation {
+.fourth-section .confirmation {
   width: 50%;
   height: 70%;
   background-color: white;
@@ -510,7 +578,7 @@ svg {
   font-family: "Sail", cursive;
 }
 
-.third-section .confirmation img {
+.fourth-section .confirmation img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -520,7 +588,7 @@ svg {
           transform: translate(-50%, -50%);
 }
 
-.third-section .confirmation .confirmation-text {
+.fourth-section .confirmation .confirmation-text {
   width: 70%;
   height: 60%;
   display: -webkit-box;
@@ -542,13 +610,13 @@ svg {
   text-align: center;
 }
 
-.third-section .confirmation .confirmation-text h1 {
+.fourth-section .confirmation .confirmation-text h1 {
   font-size: 1.5rem;
   color: #E2E390;
   margin: 1em;
 }
 
-.third-section .confirmation .confirmation-text h2 {
+.fourth-section .confirmation .confirmation-text h2 {
   margin: 1em;
   font-size: 1.2rem;
   color: #9CD9DA;

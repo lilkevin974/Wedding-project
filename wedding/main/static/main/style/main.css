@@ -507,6 +507,7 @@ svg {
   -webkit-transform: scaleX(0%) scaleY(0%);
           transform: scaleX(0%) scaleY(0%);
   position: relative;
+  font-family: "Sail", cursive;
 }
 
 .third-section .confirmation img {
@@ -517,6 +518,40 @@ svg {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.third-section .confirmation .confirmation-text {
+  width: 70%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -55%);
+          transform: translate(-50%, -55%);
+  font-weight: lighter;
+  text-align: center;
+}
+
+.third-section .confirmation .confirmation-text h1 {
+  font-size: 1.5rem;
+  color: #E2E390;
+  margin: 1em;
+}
+
+.third-section .confirmation .confirmation-text h2 {
+  margin: 1em;
+  font-size: 1.2rem;
+  color: #9CD9DA;
 }
 
 @-webkit-keyframes scale-up {

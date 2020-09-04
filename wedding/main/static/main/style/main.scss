@@ -167,15 +167,32 @@ svg{
         a{
             position:absolute;
             top:70%;
-            font-size:3rem;
+            font-size:3.5grem;
+            color: rgba(124, 124, 122, 1);
             opacity:0.5;
             cursor:pointer;
+            transition:0.2s ease-in-out;
+            text-align: center;
+
         }
+        a:hover{
+            opacity: 1;
+        }
+        a:active{
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
         .next{
             right:10%;
         }
+        .next:hover{
+            transform: translateX(10%);
+        }
         .prev{
             left:10%;
+        }
+        .prev:hover{
+            transform: translateX(-10%);
         }
         .slider{
             width: 65%;
@@ -183,19 +200,19 @@ svg{
             background-color: white;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 12px;
+            display: flex;
             position: absolute;
             top:30%;
             left:50%;
             transform: translate(-50%);
             .slide-image{
                 height:100%;
-                width:70%;
+                width:50%;
                 position:relative;
                 padding:3.5em 3em;
-
                 img {
                     position:absolute;
-                    width:50%;
+                    width:80%;
                     height:75%;
                     margin:auto;
                     object-fit: none;
@@ -205,6 +222,16 @@ svg{
                 }    
                 img.opaque {
                     opacity:1;
+                }
+            }
+            .slide-info{
+                padding:1em;
+                width: 50%;
+                span{
+                    display:none
+                }
+                .active{
+                    display: inline;
                 }
             }
         }

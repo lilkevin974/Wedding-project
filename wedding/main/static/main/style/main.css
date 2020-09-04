@@ -262,17 +262,39 @@ svg {
 .third-section .third-background a {
   position: absolute;
   top: 70%;
-  font-size: 3rem;
+  font-size: 3.5grem;
+  color: #7c7c7a;
   opacity: 0.5;
   cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+}
+
+.third-section .third-background a:hover {
+  opacity: 1;
+}
+
+.third-section .third-background a:active {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .third-section .third-background .next {
   right: 10%;
 }
 
+.third-section .third-background .next:hover {
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+}
+
 .third-section .third-background .prev {
   left: 10%;
+}
+
+.third-section .third-background .prev:hover {
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
 }
 
 .third-section .third-background .slider {
@@ -282,6 +304,9 @@ svg {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   top: 30%;
   left: 50%;
@@ -291,14 +316,14 @@ svg {
 
 .third-section .third-background .slider .slide-image {
   height: 100%;
-  width: 70%;
+  width: 50%;
   position: relative;
   padding: 3.5em 3em;
 }
 
 .third-section .third-background .slider .slide-image img {
   position: absolute;
-  width: 50%;
+  width: 80%;
   height: 75%;
   margin: auto;
   -o-object-fit: none;
@@ -311,6 +336,19 @@ svg {
 
 .third-section .third-background .slider .slide-image img.opaque {
   opacity: 1;
+}
+
+.third-section .third-background .slider .slide-info {
+  padding: 1em;
+  width: 50%;
+}
+
+.third-section .third-background .slider .slide-info span {
+  display: none;
+}
+
+.third-section .third-background .slider .slide-info .active {
+  display: inline;
 }
 
 .fourth-section {

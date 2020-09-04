@@ -8,17 +8,31 @@ function plusSlides(n) {
 function showSlides(n) {
     let i;
     const slide_image = document.querySelector('.slide-image');
-    const slides = slide_image.children;
+    const images = slide_image.children;
+    const slide_info = document.querySelector('.slide-info')
+    const info = slide_info.getElementsByTagName('span')
    /*  const dots = document.getElementsByClassName("dot"); */
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('opaque');
+    if (n > images.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = images.length}
+    for (i = 0; i < images.length; i++) {
+        images[i].classList.remove('opaque');
     }
+    const selected_image = images[slideIndex-1]
+
+    for (i=0; i < info.length; i++){
+        if (selected_image.dataset.place == info[i].dataset.show){
+            info[i].classList.add('active');
+        }
+        else{
+            info[i].classList.remove('active')
+        }
+
+    }
+
     /* for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     } */
-    slides[slideIndex-1].classList.add('opaque');
+    selected_image.classList.add('opaque');
     /* dots[slideIndex-1].className += "active"; */
 } 
   

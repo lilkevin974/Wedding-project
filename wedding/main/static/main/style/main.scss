@@ -160,6 +160,7 @@ svg{
             top:15%;
             left:50%;
             transform: translate(-50%,-50%);
+            color: rgba(124, 124, 122, 1);
             font-size: 2rem;
             font-family: $font1;
             letter-spacing: 2px;
@@ -167,7 +168,7 @@ svg{
         a{
             position:absolute;
             top:70%;
-            font-size:3.5grem;
+            font-size:3.5rem;
             color: rgba(124, 124, 122, 1);
             opacity:0.5;
             cursor:pointer;
@@ -227,12 +228,48 @@ svg{
             .slide-info{
                 padding:1em;
                 width: 50%;
-                span{
-                    display:none
+                display: flex;
+                flex-direction: column;
+                .info{
+                    flex: 1;
+                    span{
+                        display:none
+                    }
+                    .active{
+                        display: inline;
+                    }
                 }
-                .active{
-                    display: inline;
+
+            .map-container{
+                #map-mairie{
+                    height: 400px;
+                    width: 100%;
                 }
+            }
+                .info-btn{
+                    display: flex;
+                    align-self: flex-end;
+                    margin: 2.5em 1em;
+                    .show{
+                        padding:.1em;
+                        margin:0 .6em ;
+                        width:2.5em;
+                        height: 2.5em;
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        border-radius: 8px;
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        
+                    }
+                    .text{
+                        img{
+                            width:1.5em;
+                        }
+                    }
+                }
+                
             }
         }
     }

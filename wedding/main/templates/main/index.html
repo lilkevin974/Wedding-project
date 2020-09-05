@@ -50,6 +50,14 @@
                         <p>Lieu : <span class='active' data-show='mairie'>Mairie de Saint-Denis</span><span data-show='eglise'>Eglise </span></p>
                         <p>Horaires : <span class='active' data-show='mairie'>13</span><span data-show='eglise'>15</span></p>
                     </div>
+                    <div class="map-container">
+                        <div id='map-mairie' class='activeMap' data-show='mairie'></div>
+                        <div id='map-eglise' data-show='eglise'></div>
+                    </div>
+                    <div class="info-btn">
+                        <div class="show text"><img src="{% static 'main/images/info-icon.svg' %}"></div>
+                        <div class="show map" onclick="showMap()"><img src="{% static 'main/images/map-icon.svg' %}"></div>
+                    </div>
                 </div>
             </div>
             
@@ -113,6 +121,8 @@
             duration: 1200,
         });   
     </script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuhrrV1o0g7777qiDpJbVSO0e96NDHRow"></script>
+
 </body>
 </html>
     

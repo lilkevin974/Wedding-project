@@ -36,7 +36,22 @@ function showSlides(n) {
     /* dots[slideIndex-1].className += "active"; */
 } 
   
-
+function showMap() {
+    const active          = document.querySelector('active');
+    const mapContainer    = document.querySelector('.map-container');
+    const maps            = mapContainer.children;
+    const mairiePosition  = {lat: -20.879416, lng: 55.447837};
+    const mairieContainer = document.getElementById('map-mairie');
+    for (i=0; i < maps.length; i++){
+        if (active.dataset.show == maps[i].dataset.show){
+            selectedMap=maps[i]
+        }
+        else{
+            maps[i].classList.remove('activeMap')
+        }
+    }
+    selectedMap.classList.add('activeMap')
+}
 
 
 // Ajax POST request to send confirmation
@@ -87,3 +102,17 @@ function getCookie(name) {
     }
     return cookieValue;
 }
+
+
+
+
+function initMap(position,container) {
+    // The location of Uluru
+    var mairie = {lat: -20.879416, lng: 55.447837};
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+        document.getElementById('map-mairie'), {zoom: 15, center: mairie});
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({position: mairie, map: map});
+  }
+  

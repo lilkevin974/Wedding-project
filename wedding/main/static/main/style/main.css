@@ -239,6 +239,7 @@ svg {
 .third-section {
   width: 100%;
   height: 110vh;
+  position: relative;
 }
 
 .third-section .third-background {
@@ -267,8 +268,10 @@ svg {
   color: #7c7c7a;
   opacity: 0.5;
   cursor: pointer;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
+  -webkit-transition-property: opacity, -webkit-transform !important;
+  transition-property: opacity, -webkit-transform !important;
+  transition-property: transform, opacity !important;
+  transition-property: transform, opacity, -webkit-transform !important;
   text-align: center;
 }
 
@@ -285,8 +288,7 @@ svg {
 }
 
 .third-section .third-background .next:hover {
-  -webkit-transform: translateX(10%);
-          transform: translateX(10%);
+  font-size: 4rem;
 }
 
 .third-section .third-background .prev {
@@ -294,8 +296,7 @@ svg {
 }
 
 .third-section .third-background .prev:hover {
-  -webkit-transform: translateX(-10%);
-          transform: translateX(-10%);
+  font-size: 4rem;
 }
 
 .third-section .third-background .slider {
@@ -310,9 +311,38 @@ svg {
   display: flex;
   position: absolute;
   top: 30%;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  left: 17.5%;
+}
+
+.third-section .third-background .slider .slide-label {
+  position: absolute;
+  text-align: center;
+  font-size: 1.8rem;
+  top: 5%;
+  right: -17px;
+  width: 5.5em;
+  height: 2em;
+  line-height: 2.2em;
+  color: #7c7c7a;
+  letter-spacing: 1px;
+  background-color: #f1faf9;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+}
+
+.third-section .third-background .slider .slide-label::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+  border-left: 0px solid transparent;
+  border-right: 17px solid transparent;
+  border-top: 15px solid rgba(0, 0, 0, 0.25);
 }
 
 .third-section .third-background .slider .slide-image {
@@ -340,34 +370,105 @@ svg {
 }
 
 .third-section .third-background .slider .slide-info {
-  padding: 1em;
+  padding: 1em 1em 1em 0;
   width: 50%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  position: relative;
 }
 
-.third-section .third-background .slider .slide-info .info {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.third-section .third-background .slider .slide-info .steps {
+  position: absolute;
+  top: 25%;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  text-align: center;
+  width: 100%;
 }
 
-.third-section .third-background .slider .slide-info .info span {
+.third-section .third-background .slider .slide-info .steps p {
+  font-family: "Quattrocento", serif;
+  margin: 1em 0;
+}
+
+.third-section .third-background .slider .slide-info .steps p i {
+  font-size: 2.7rem;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.third-section .third-background .slider .slide-info .steps span {
+  font-size: 1.2rem;
+  font-weight: 400;
   display: none;
+  color: #7c7c7a;
 }
 
-.third-section .third-background .slider .slide-info .info .active {
-  display: inline;
+.third-section .third-background .slider .slide-info .steps .active {
+  display: inline-block;
+  -webkit-animation: active .8s ease-out 0s forwards;
+          animation: active .8s ease-out 0s forwards;
+}
+
+@-webkit-keyframes active {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes active {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.third-section .third-background .slider .slide-info .map-container {
+  position: absolute;
+  top: 21%;
+  height: 50%;
+  width: 80%;
+  opacity: 0;
+  margin: 1em;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .third-section .third-background .slider .slide-info .map-container #map-mairie {
-  height: 400px;
+  height: 100%;
   width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.third-section .third-background .slider .slide-info .info-reveal {
+  opacity: 1;
 }
 
 .third-section .third-background .slider .slide-info .info-btn {
@@ -377,6 +478,7 @@ svg {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 2.5em 1em;
+  z-index: 2;
 }
 
 .third-section .third-background .slider .slide-info .info-btn .show {
@@ -397,10 +499,38 @@ svg {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  -webkit-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
 }
 
-.third-section .third-background .slider .slide-info .info-btn .text img {
-  width: 1.5em;
+.third-section .third-background .slider .slide-info .info-btn .show i {
+  font-size: 30px;
+  color: #7c7c7a;
+  pointer-events: none;
+}
+
+.third-section .dot-container {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.third-section .dot-container .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.third-section .dot-container .dot:hover {
+  background-color: #717171;
 }
 
 .fourth-section {

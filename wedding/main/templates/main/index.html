@@ -8,7 +8,7 @@
     <title>Notre Mariage</title>
     <link rel="stylesheet" href="{% static 'main/style/main.css' %}"> 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round">  
 </head>
 
 
@@ -37,38 +37,45 @@
 
     <section class="third-section">
         <div class="third-background">
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="prev" onclick="plusSlides(-1)" data-aos="slide-right" data-aos-mirror="false">&#10094;</a>
   
             <h1>27 &#183 Août &#183 2021</h1>
-            <div class="slider">
+            <div class="slider" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
+                <div class="slide-label">Mairie</div>
                 <div class="slide-image">
                     <img class='opaque' src="{% static 'main/images/Mairie.jpg' %}" data-place='mairie' />
                     <img src="{% static 'main/images/Eglise.jpg' %}" data-place='eglise'/>
                 </div>
                 <div class="slide-info">
-                    <div class="info">
-                        <p>Lieu : <span class='active' data-show='mairie'>Mairie de Saint-Denis</span><span data-show='eglise'>Eglise </span></p>
-                        <p>Horaires : <span class='active' data-show='mairie'>13</span><span data-show='eglise'>15</span></p>
+                    <div class="steps info-reveal">
+                        <p><i class="material-icons-round">place</i><br><span class='active' data-show='mairie'>Hôtel de Ville de Saint-Denis</span><span data-show='eglise'>Eglise de Saint-Jacques</span></p>
+                        <p><i class="material-icons-round">alarm</i><br><span class='active' data-show='mairie'>13 : 00</span><span data-show='eglise'>15 : 00</span></p>
                     </div>
                     <div class="map-container">
                         <div id='map-mairie' class='activeMap' data-show='mairie'></div>
                         <div id='map-eglise' data-show='eglise'></div>
                     </div>
                     <div class="info-btn">
-                        <div class="show text"><img src="{% static 'main/images/info-icon.svg' %}"></div>
-                        <div class="show map" onclick="showMap()"><img src="{% static 'main/images/map-icon.svg' %}"></div>
+                        <div class="show text" onclick="showInfo()"><i class="material-icons-outlined">info</i></div>
+                        <div class="show map" onclick="showMap()"><i class="material-icons-outlined">map</i></div>
                     </div>
                 </div>
+                
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div> 
             </div>
             
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="next" onclick="plusSlides(1)" data-aos="slide-left" data-aos-mirror="false">&#10095;</a> 
+            
         </div>
-
+                
     </section>
 
 
     <section class="fourth-section">
-        <div class="registration" data-aos="slide-up" data-aos-easing="ease-in-out" data-aos-duration="1800">
+        <div class="registration" data-aos="slide-up" data-aos-easing="ease-out" data-aos-duration="1200">
             <h1><span>Infos personnelles</span></h1>
             <div class="input-container">
                 <input placeholder="Adresse e-mail*" type="text" name="email" id="email">
@@ -119,9 +126,11 @@
     <script>
         AOS.init({
             duration: 1200,
+            anchorPlacement:'center-bottom',
+            mirror:true,
         });   
     </script>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuhrrV1o0g7777qiDpJbVSO0e96NDHRow"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuhrrV1o0g7777qiDpJbVSO0e96NDHRow&v=weekly&map_ids=17a2994719f5f1cc"></script>
 
 </body>
 </html>

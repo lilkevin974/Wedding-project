@@ -346,27 +346,46 @@ svg {
 }
 
 .third-section .third-background .slider .slide-image {
-  height: 100%;
-  width: 50%;
+  height: 75%;
+  width: 40%;
   position: relative;
-  padding: 3.5em 3em;
+  margin: 3.5em 3em;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .third-section .third-background .slider .slide-image img {
   position: absolute;
-  width: 80%;
-  height: 75%;
+  width: 100%;
+  height: 100%;
   margin: auto;
-  -o-object-fit: none;
-     object-fit: none;
-  -webkit-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: opacity .8s ease-in-out, -webkit-transform 1.5s ease-in-out .5s, -webkit-filter .5s ease-in-out .5s;
+  transition: opacity .8s ease-in-out, -webkit-transform 1.5s ease-in-out .5s, -webkit-filter .5s ease-in-out .5s;
+  transition: opacity .8s ease-in-out, transform 1.5s ease-in-out .5s, filter .5s ease-in-out .5s;
+  transition: opacity .8s ease-in-out, transform 1.5s ease-in-out .5s, filter .5s ease-in-out .5s, -webkit-transform 1.5s ease-in-out .5s, -webkit-filter .5s ease-in-out .5s;
   opacity: 0;
-  border-radius: 12px;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
 }
 
 .third-section .third-background .slider .slide-image img.opaque {
   opacity: 1;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+.third-section .third-background .slider .slide-image [data-place='mairie'].opaque {
+  -webkit-transform: translateY(25%) scale(1.7);
+          transform: translateY(25%) scale(1.7);
+}
+
+.third-section .third-background .slider .slide-image [data-place='eglise'].opaque {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .third-section .third-background .slider .slide-info {

@@ -45,15 +45,17 @@
                 <div class="slide-image">
                     <img class='opaque' src="{% static 'main/images/Mairie.jpg' %}" data-place='mairie' />
                     <img src="{% static 'main/images/Eglise.jpg' %}" data-place='eglise'/>
+                    <img src="{% static 'main/images/Jardin Créole.jpg' %}" data-place='salle'/>
                 </div>
                 <div class="slide-info">
                     <div class="steps info-reveal">
-                        <p><i class="material-icons-round">place</i><br><span class='active' data-show='mairie'>Hôtel de Ville de Saint-Denis</span><span data-show='eglise'>Eglise de Saint-Jacques</span></p>
-                        <p><i class="material-icons-round">alarm</i><br><span class='active' data-show='mairie'>13 : 00</span><span data-show='eglise'>15 : 00</span></p>
+                        <p><i class="material-icons-round">place</i><br><span class='active' data-show='mairie'>Hôtel de Ville de Saint-Denis</span><span data-show='eglise'>Eglise de Saint-Jacques</span><span data-show='salle'>Jardin Créole</span></p>
+                        <p><i class="material-icons-round">alarm</i><br><span class='active' data-show='mairie'>13 : 00</span><span data-show='eglise'>15 : 00</span><span data-show='salle'>19 : 00</span></p>
                     </div>
                     <div class="map-container">
                         <div id='map-mairie' class='activeMap' data-show='mairie'></div>
                         <div id='map-eglise' data-show='eglise'></div>
+                        <div id='map-salle' data-show='salle'></div>
                     </div>
                     <div class="info-btn">
                         <div class="show text" onclick="showInfo()"><i class="material-icons-outlined">info</i></div>
@@ -64,6 +66,7 @@
                 <div class="dot-container">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div> 
             </div>
             

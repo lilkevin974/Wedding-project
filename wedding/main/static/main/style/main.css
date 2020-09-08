@@ -347,7 +347,7 @@ svg {
 
 .third-section .third-background .slider .slide-image {
   height: 75%;
-  width: 40%;
+  width: 45%;
   position: relative;
   margin: 3.5em 3em;
   overflow: hidden;
@@ -386,6 +386,22 @@ svg {
 .third-section .third-background .slider .slide-image [data-place='eglise'].opaque {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+.third-section .third-background .slider .slide-image [data-place='salle'] {
+  -webkit-transform: scale(3) translateX(-30%);
+          transform: scale(3) translateX(-30%);
+  -webkit-transition: opacity .8s ease-in-out, -webkit-transform 4s ease-in-out .5s;
+  transition: opacity .8s ease-in-out, -webkit-transform 4s ease-in-out .5s;
+  transition: opacity .8s ease-in-out, transform 4s ease-in-out .5s;
+  transition: opacity .8s ease-in-out, transform 4s ease-in-out .5s, -webkit-transform 4s ease-in-out .5s;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+.third-section .third-background .slider .slide-image [data-place='salle'].opaque {
+  -webkit-transform: scale(1.5) translateX(15%);
+          transform: scale(1.5) translateX(15%);
 }
 
 .third-section .third-background .slider .slide-info {

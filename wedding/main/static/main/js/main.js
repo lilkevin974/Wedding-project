@@ -80,6 +80,7 @@ function slideColor(slide){
     const icons   = document.querySelectorAll('.material-icons-round');
     if (slide == 'mairie'){color = '#f1faf9'; name  = 'Mairie';}
     else if (slide == 'eglise'){color = '#faeeeb'; name  = 'Eglise';}
+    else if (slide == 'salle'){color = '#faf7f1'; name  = 'Réception';}
 
     label.innerHTML=name;
     label.style.backgroundColor=color;

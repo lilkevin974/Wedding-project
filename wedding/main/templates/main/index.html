@@ -15,7 +15,7 @@
 
 <body>
     <!-- <img src="{% static 'main/images/background.png' %}" alt="" class="background"> -->
-    <section class="first-section">  
+    <section class="first-section" class="rellax" data-rellax-speed="7">  
         {% include 'main/svg.html' %}    
     </section>
     <section class="second-section">
@@ -134,7 +134,11 @@
         });   
     </script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuhrrV1o0g7777qiDpJbVSO0e96NDHRow&v=weekly&map_ids=17a2994719f5f1cc"></script>
-
+    <script src="{% static 'main/js/rellax.min.js' %}"></script>
+    <script>
+    // Accepts any class name
+    var rellax = new Rellax('.rellax');
+    </script>
 </body>
 </html>
     

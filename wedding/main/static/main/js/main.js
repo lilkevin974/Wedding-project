@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function(){
+        document.querySelectorAll('#kévin, #annaelle, #et, #frame').forEach(element => element.addEventListener('animationend', endOpacity));
+
+})
+function endOpacity(){
+    this.style.opacity='1'
+}
+
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -91,7 +100,6 @@ function slideColor(slide){
         showBut[i].addEventListener('click', (e)=> {
             showBut.forEach(element => element.style.backgroundColor='white')
             e.target.style.backgroundColor=color;
-            console.log(e.target)
         })
     }
     icons.forEach(icon => icon.style.color=color)

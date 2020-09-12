@@ -132,26 +132,26 @@ svg {
 
 #frame {
   opacity: 0;
-  -webkit-animation: animatecadre 1s 1s linear forwards;
-          animation: animatecadre 1s 1s linear forwards;
+  -webkit-animation: animatecadre 1s 1s linear none;
+          animation: animatecadre 1s 1s linear none;
 }
 
 #annaelle {
   opacity: 0;
-  -webkit-animation: animateA 0.5s 2s linear forwards;
-          animation: animateA 0.5s 2s linear forwards;
+  -webkit-animation: animateA 0.5s 2s linear none;
+          animation: animateA 0.5s 2s linear none;
 }
 
 #kévin {
   opacity: 0;
-  -webkit-animation: animateC 0.5s 2s linear forwards;
-          animation: animateC 0.5s 2s linear forwards;
+  -webkit-animation: animateC 0.5s 2s linear none;
+          animation: animateC 0.5s 2s linear none;
 }
 
 #et {
   opacity: 0;
-  -webkit-animation: animateB 0.5s 2s linear forwards;
-          animation: animateB 0.5s 2s linear forwards;
+  -webkit-animation: animateB 0.5s 2s linear none;
+          animation: animateB 0.5s 2s linear none;
 }
 
 .title {

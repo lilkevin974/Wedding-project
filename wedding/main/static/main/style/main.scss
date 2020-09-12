@@ -75,19 +75,19 @@ svg{
 
 #frame{
     opacity: 0;
-    animation: animatecadre 1s 1s linear forwards;
+    animation: animatecadre 1s 1s linear none;
 }
 #annaelle{
     opacity: 0;
-    animation: animateA 0.5s 2s linear forwards;
+    animation: animateA 0.5s 2s linear none;
 }
 #kévin{
     opacity: 0;
-    animation: animateC 0.5s 2s linear forwards;
+    animation: animateC 0.5s 2s linear none;
 }
 #et{
     opacity: 0;
-    animation: animateB 0.5s 2s linear forwards;
+    animation: animateB 0.5s 2s linear none;
 }
 
 .title{

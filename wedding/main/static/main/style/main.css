@@ -144,8 +144,10 @@ svg {
 
 #kévin {
   opacity: 0;
+  z-index: 1000;
   -webkit-animation: animateC 0.5s 2s linear none;
           animation: animateC 0.5s 2s linear none;
+  position: absolute;
 }
 
 #et {
@@ -383,9 +385,18 @@ svg {
           transform: translateY(25%) scale(1.7);
 }
 
+.third-section .third-background .slider .slide-image [data-place='eglise'] {
+  -webkit-transform: scale(3) translate(30%, -20%);
+          transform: scale(3) translate(30%, -20%);
+  -webkit-transition: opacity .8s ease-in-out, -webkit-transform 2.5s ease-in-out .5s, -webkit-filter 1.5s ease-in-out .5s;
+  transition: opacity .8s ease-in-out, -webkit-transform 2.5s ease-in-out .5s, -webkit-filter 1.5s ease-in-out .5s;
+  transition: opacity .8s ease-in-out, transform 2.5s ease-in-out .5s, filter 1.5s ease-in-out .5s;
+  transition: opacity .8s ease-in-out, transform 2.5s ease-in-out .5s, filter 1.5s ease-in-out .5s, -webkit-transform 2.5s ease-in-out .5s, -webkit-filter 1.5s ease-in-out .5s;
+}
+
 .third-section .third-background .slider .slide-image [data-place='eglise'].opaque {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1.5) translate(0%, 0%);
+          transform: scale(1.5) translate(0%, 0%);
 }
 
 .third-section .third-background .slider .slide-image [data-place='salle'] {

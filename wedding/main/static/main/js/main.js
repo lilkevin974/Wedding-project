@@ -110,21 +110,6 @@ function slideColor(slide){
 // Ajax POST request to send confirmation
 function confirmation(){
 
-
-	const xhttp = new XMLHttpRequest();
-	xhttp.open('POST', '/')
-	xhttp.setRequestHeader("X-CSRFToken",  getCookie('csrftoken')); 
-	xhttp.onload = () => {
-        const registration = document.querySelector(".registration");
-        const confirmation = document.querySelector(".confirmation")
-        registration.style.animation='scale-down .8s forwards'
-        registration.addEventListener('animationend', ()=> {
-            registration.style.display='none'
-            confirmation.style.display='flex'
-            confirmation.style.animation='scale-up .8s forwards'
-        })
-        
-    }
     const data={};
     data.email=document.querySelector('#email').value;
     data.last_name=document.querySelector('#nom').value;
@@ -133,11 +118,34 @@ function confirmation(){
     data.children=document.querySelector('#enfants').value;
     data.message=document.querySelector('#message').value;
 
-    console.log(data)
-    j_data=JSON.stringify(data)
+    console.log(data.email)
+    validation = ValidateEmail(data.email);
 
-	xhttp.send(j_data);
-          return false;
+    if (validation == false){
+        alert("Adresse e-mail invalide!");
+    }
+
+    else {
+        const xhttp = new XMLHttpRequest();
+        xhttp.open('POST', '/')
+        xhttp.setRequestHeader("X-CSRFToken",  getCookie('csrftoken')); 
+        xhttp.onload = () => {
+            const registration = document.querySelector(".registration");
+            const confirmation = document.querySelector(".confirmation")
+            registration.style.animation='scale-down .8s forwards'
+            registration.addEventListener('animationend', ()=> {
+                registration.style.display='none'
+                confirmation.style.display='flex'
+                confirmation.style.animation='scale-up .8s forwards'
+            })    
+        }
+
+        console.log(data)
+        j_data=JSON.stringify(data)
+
+        xhttp.send(j_data);
+            return false; 
+    }	
 }
 
 function getCookie(name) {
@@ -157,7 +165,12 @@ function getCookie(name) {
 }
 
 
-
+function ValidateEmail(inputText){
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    validation = mailformat.test(inputText)
+    console.log(validation)
+    return validation
+}
 
 function initMap(position,container) {
     // The location of Uluru

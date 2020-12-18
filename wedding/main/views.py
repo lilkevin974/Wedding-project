@@ -13,9 +13,18 @@ def index(request):
 
     if request.method == 'POST':
         data = json.loads(request.body)
+        if data['children'] =='':
+            data['children']=0
+        if data['adults']=='':
+            data['adults']=1
         print(Confirmation.objects.all())
         print(data)
-        Confirmation.objects.create(email=data['email'], first_name=data['first_name'],last_name=data['last_name'],adults=data['adults'],children=data['children'],message=data['message'])
+        Confirmation.objects.create(email=data['email'], 
+                                    first_name=data['first_name'],
+                                    last_name=data['last_name'],
+                                    adults=data['adults'],
+                                    children=data['children'],
+                                    message=data['message'])
         
         #return HttpResponse(data['first_name'])
         """ send_mail(

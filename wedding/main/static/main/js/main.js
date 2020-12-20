@@ -107,7 +107,7 @@ function slideColor(slide){
 }
 
 
-// Ajax POST request to send confirmation
+// Ajax POST request to send confirmation form
 function confirmation(){
 
     const data={};
@@ -118,13 +118,18 @@ function confirmation(){
     data.children=document.querySelector('#enfants').value;
     data.message=document.querySelector('#message').value;
 
-    console.log(data.email)
+    
     validation = ValidateEmail(data.email);
 
     if (validation == false){
         alert("Adresse e-mail invalide!");
     }
-
+    else if (data.last_name==''){
+        alert("Oups! Tu as oublié ton nom!")
+    }
+    else if (data.first_name==''){
+        alert("Oups! Tu as oublié ton prénom!")
+    }
     else {
         const xhttp = new XMLHttpRequest();
         xhttp.open('POST', '/')
@@ -132,6 +137,7 @@ function confirmation(){
         xhttp.onload = () => {
             const registration = document.querySelector(".registration");
             const confirmation = document.querySelector(".confirmation")
+            confirmation.querySelector('h1').innerHTML=`Merci ${data.first_name} pour ta confirmation`;
             registration.style.animation='scale-down .8s forwards'
             registration.addEventListener('animationend', ()=> {
                 registration.style.display='none'
@@ -140,7 +146,6 @@ function confirmation(){
             })    
         }
 
-        console.log(data)
         j_data=JSON.stringify(data)
 
         xhttp.send(j_data);
@@ -168,7 +173,6 @@ function getCookie(name) {
 function ValidateEmail(inputText){
     var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     validation = mailformat.test(inputText)
-    console.log(validation)
     return validation
 }
 

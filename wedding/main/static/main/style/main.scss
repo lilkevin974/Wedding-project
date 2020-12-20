@@ -264,6 +264,7 @@ svg{
                 [data-place='eglise']{
                     transform: scale(3) translate(30%,-20%);
                     transition: opacity .8s ease-in-out, transform 2.5s ease-in-out .5s, filter 1.5s ease-in-out .5s;
+                    filter: blur(0.3px);
                 }
                 [data-place='eglise'].opaque{
                     transform: scale(1.5) translate(0%,0%);

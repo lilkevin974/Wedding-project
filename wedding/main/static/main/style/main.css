@@ -392,6 +392,8 @@ svg {
   transition: opacity .8s ease-in-out, -webkit-transform 2.5s ease-in-out .5s, -webkit-filter 1.5s ease-in-out .5s;
   transition: opacity .8s ease-in-out, transform 2.5s ease-in-out .5s, filter 1.5s ease-in-out .5s;
   transition: opacity .8s ease-in-out, transform 2.5s ease-in-out .5s, filter 1.5s ease-in-out .5s, -webkit-transform 2.5s ease-in-out .5s, -webkit-filter 1.5s ease-in-out .5s;
+  -webkit-filter: blur(0.3px);
+          filter: blur(0.3px);
 }
 
 .third-section .third-background .slider .slide-image [data-place='eglise'].opaque {

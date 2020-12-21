@@ -27,13 +27,13 @@ def index(request):
                                     message=data['message'])
         
         #return HttpResponse(data['first_name'])
-        """ send_mail(
+        send_mail(
             subject = 'That’s your subject',
             message = 'That’s your message body',
             from_email = 'lilkevin@hotmail.fr',
-            recipient_list = ['robert-kevin@outlook.com'],
+            recipient_list = [data['email']],
             fail_silently = False,
-        ) """
+        )
 
 
     return render(request, 'main/index.html')

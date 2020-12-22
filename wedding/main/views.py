@@ -3,8 +3,8 @@ import json
 from django.http import HttpResponse
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.shortcuts import render
-from django.core.mail import send_mail
 from main.models import Confirmation
+from main.send_email import send_html_email
 
 # Create your views here.
 
@@ -27,12 +27,11 @@ def index(request):
                                     message=data['message'])
         
         #return HttpResponse(data['first_name'])
-        send_mail(
-            subject = 'That’s your subject',
-            message = 'That’s your message body',
-            from_email = 'lilkevin@hotmail.fr',
-            recipient_list = [data['email']],
-            fail_silently = False,
+        send_html_email(
+            subject = "Mariage d'Annaëlle et Kévin - Confirmation reçue",
+            template_name = 'main/email.html',
+            sender = 'lilkevin@hotmail.fr',
+            to_list = [data['email']],
         )
 
 

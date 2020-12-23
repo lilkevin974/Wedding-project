@@ -162,16 +162,6 @@ svg {
   font-size: 10vh;
 }
 
-.a {
-  color: #f1a0c6;
-  position: absolute;
-  margin: auto;
-  left: -25%;
-  right: 0;
-  text-align: center;
-  top: 40%;
-}
-
 .second-section {
   height: 110vh;
   background-color: white;
@@ -219,23 +209,17 @@ svg {
   font-family: "Fanwood Text", serif;
 }
 
-.second-section .info img {
-  width: 30%;
-  -webkit-box-shadow: rgba(90, 178, 179, 0.49) -15px -15px;
-          box-shadow: rgba(90, 178, 179, 0.49) -15px -15px;
-}
-
 .second-section .blue img {
   width: 25%;
-  -webkit-box-shadow: rgba(90, 178, 179, 0.49) -15px -15px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
-          box-shadow: rgba(90, 178, 179, 0.49) -15px -15px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
+  -webkit-box-shadow: #edfafa -25px -25px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
+          box-shadow: #edfafa -25px -25px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
 }
 
 .second-section .pink img {
   margin-left: -5%;
   width: 30%;
-  -webkit-box-shadow: rgba(247, 170, 206, 0.4) 15px -15px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
-          box-shadow: rgba(247, 170, 206, 0.4) 15px -15px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
+  -webkit-box-shadow: #fbdedd 25px -25px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
+          box-shadow: #fbdedd 25px -25px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
 }
 
 .third-section {
@@ -881,14 +865,14 @@ svg {
 
 .fourth-section .confirmation .confirmation-text h1 {
   font-size: 1.5rem;
-  color: #E2E390;
+  color: #fbdedd;
   margin: 1em;
 }
 
 .fourth-section .confirmation .confirmation-text h2 {
   margin: 1em;
   font-size: 1.2rem;
-  color: #9CD9DA;
+  color: #edfafa;
 }
 
 @-webkit-keyframes scale-up {
@@ -900,7 +884,7 @@ svg {
   to {
     -webkit-transform: scaleY(100%) scaleX(100%);
             transform: scaleY(100%) scaleX(100%);
-    opacity: 0.85;
+    opacity: 0.95;
   }
 }
 
@@ -913,7 +897,7 @@ svg {
   to {
     -webkit-transform: scaleY(100%) scaleX(100%);
             transform: scaleY(100%) scaleX(100%);
-    opacity: 0.85;
+    opacity: 0.95;
   }
 }
 

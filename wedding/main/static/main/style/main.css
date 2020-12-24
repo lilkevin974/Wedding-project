@@ -29,6 +29,10 @@ section {
   background-image: url("../images/background.png");
 }
 
+.disable-scroll {
+  overflow: hidden;
+}
+
 @-webkit-keyframes animatecadre {
   0% {
     -webkit-transform: rotate(10deg) scale(0.8);
@@ -130,30 +134,35 @@ svg {
   z-index: -2;
 }
 
-#frame {
+#group {
   opacity: 0;
-  -webkit-animation: animatecadre 1s 1s linear none;
-          animation: animatecadre 1s 1s linear none;
+  -webkit-animation: animatecadre 1s linear 1s;
+          animation: animatecadre 1s linear 1s;
 }
 
 #annaelle {
   opacity: 0;
-  -webkit-animation: animateA 0.5s 2s linear none;
-          animation: animateA 0.5s 2s linear none;
+  -webkit-animation: animateA 0.5s linear 2s;
+          animation: animateA 0.5s linear 2s;
 }
 
 #kévin {
   opacity: 0;
   z-index: 1000;
-  -webkit-animation: animateC 0.5s 2s linear none;
-          animation: animateC 0.5s 2s linear none;
+  -webkit-animation: animateC 0.5s linear 2s;
+          animation: animateC 0.5s linear 2s;
   position: absolute;
 }
 
 #et {
   opacity: 0;
-  -webkit-animation: animateB 0.5s 2s linear none;
-          animation: animateB 0.5s 2s linear none;
+  -webkit-animation: animateB 0.5s linear 2s;
+          animation: animateB 0.5s linear 2s;
+}
+
+.js-loading {
+  -webkit-animation-play-state: paused !important;
+          animation-play-state: paused !important;
 }
 
 .title {
@@ -581,13 +590,14 @@ svg {
           align-items: center;
   background-attachment: fixed;
   background-image: url("../images/Love.jpg");
+  overflow-y: hidden;
 }
 
 .fourth-section .registration {
   width: 45%;
   height: 80%;
   background-color: white;
-  opacity: 0.85;
+  opacity: 0.95;
   padding: 1.5em 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -741,10 +751,13 @@ svg {
   font-size: 1.5rem;
   cursor: pointer;
   position: relative;
-  border: 3px solid #f7aace;
+  border: 3px solid #fbdedd;
   outline: none;
-  color: #f7aace;
+  color: #fbdedd;
   background-color: transparent;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
   margin: 1.8em 2em 0;
   font-family: "Quattrocento", serif;
   font-weight: 700;
@@ -756,7 +769,7 @@ svg {
 .fourth-section .registration .btn--future::after, .fourth-section .registration .btn--future::before {
   content: "";
   position: absolute;
-  border: 3px solid #f7aace;
+  border: 3px solid #fbdedd;
   width: calc(100% + 15px);
   height: 60px;
   -webkit-transition: 0.5s ease;
@@ -780,12 +793,11 @@ svg {
 .fourth-section .registration .btn--future:hover:after, .fourth-section .registration .btn--future:hover:before {
   width: calc(100% - 30px);
   height: 80px;
-  border-color: rgba(90, 178, 179, 0.8);
+  border-color: #fccaca;
 }
 
 .fourth-section .registration .btn--future:hover {
-  color: rgba(90, 178, 179, 0.8);
-  border-color: rgba(90, 178, 179, 0.8);
+  color: #fccaca;
 }
 
 .fourth-section .registration-hide {
@@ -865,14 +877,14 @@ svg {
 
 .fourth-section .confirmation .confirmation-text h1 {
   font-size: 1.5rem;
-  color: #fbdedd;
+  color: #fccaca;
   margin: 1em;
 }
 
 .fourth-section .confirmation .confirmation-text h2 {
   margin: 1em;
   font-size: 1.2rem;
-  color: #edfafa;
+  color: #b6e9e9;
 }
 
 @-webkit-keyframes scale-up {

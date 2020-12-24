@@ -1,9 +1,11 @@
-document.addEventListener('DOMContentLoaded', function(){
-        document.querySelectorAll('#kévin, #annaelle, #et, #frame').forEach(element => element.addEventListener('animationend', endOpacity));
+document.body.classList.add("disable-scroll");
 
-})
-function endOpacity(){
-    this.style.opacity='1'
+document.querySelectorAll('#kévin, #annaelle, #et, #group').forEach(element => element.addEventListener('animationend', endAnimation));
+
+document.querySelector('#kévin').addEventListener('animationend',function(){document.body.classList.remove("disable-scroll")})
+
+function endAnimation(){
+    this.style.opacity='1'   
 }
 
 

@@ -32,6 +32,11 @@ section{
     background-image: url("../images/background.png");
 }
 
+.disable-scroll {
+    overflow: hidden;
+}
+
+
 @keyframes animatecadre{
     0%{
         transform: rotate(10deg) scale(0.8);
@@ -76,23 +81,27 @@ svg{
     z-index: -2;
 }
 
-#frame{
+#group{
     opacity: 0;
-    animation: animatecadre 1s 1s linear none;
+    animation: animatecadre 1s linear 1s ;
 }
 #annaelle{
     opacity: 0;
-    animation: animateA 0.5s 2s linear none;
+    animation: animateA 0.5s linear 2s ;
 }
 #kévin{
     opacity: 0;
     z-index: 1000;
-    animation: animateC 0.5s 2s linear none;
+    animation: animateC 0.5s linear 2s ;
     position: absolute;
 }
 #et{
     opacity: 0;
-    animation: animateB 0.5s 2s linear none;
+    animation: animateB 0.5s linear 2s ;
+}
+
+.js-loading {
+  animation-play-state: paused !important;
 }
 
 .title{
@@ -395,12 +404,13 @@ svg{
     align-items: center;
     background-attachment: fixed;
     background-image: url("../images/Love.jpg");
+    overflow-y: hidden;
 
     .registration{
         width:45%;
         height:80%;
         background-color: white;
-        opacity: 0.85;
+        opacity: 0.95;
         padding:1.5em 5%;
         display: flex;
         flex-direction: column;
@@ -507,10 +517,12 @@ svg{
             font-size: 1.5rem;
             cursor: pointer;
             position: relative;
-            border: 3px solid rgba(247, 170, 206, 1);
+            border: 3px solid $pink;
             outline: none;
-            color: rgba(247, 170, 206, 1);
+            color: $pink;
             background-color: transparent;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
             margin: 1.8em 2em 0;
             font-family: $font1;
             font-weight: 700;
@@ -520,7 +532,7 @@ svg{
                 &::after, &::before {
                     content: "";
                     position: absolute;
-                    border: 3px solid rgba(247, 170, 206, 1);
+                    border: 3px solid $pink;
                     width: calc(100% + 15px);
                     height: 60px;
                     transition: 0.5s ease;
@@ -540,11 +552,10 @@ svg{
                 &:hover:after, &:hover:before {
                     width: calc(100% - 30px);
                     height: 80px;
-                    border-color: rgba(90, 178, 179, 0.8);
+                    border-color: rgb(252, 202, 202);
                 }
                 &:hover{
-                    color: rgba(90, 178, 179, 0.8);
-                    border-color: rgba(90, 178, 179, 0.8);
+                    color:rgb(252, 202, 202);
                 }
             }
         }
@@ -593,13 +604,13 @@ svg{
             text-align: center;
             h1{
                 font-size: 1.5rem;
-                color:$pink;
+                color:rgb(252, 202, 202);
                 margin:1em;
             }
             h2{
                 margin:1em;
                 font-size:1.2rem;
-                color:$blue;
+                color:rgb(182, 233, 233);
             }
         }
 

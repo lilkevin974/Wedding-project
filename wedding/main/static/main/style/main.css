@@ -172,12 +172,16 @@ svg {
 }
 
 .second-section {
-  height: 110vh;
+  min-height: 110vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: white;
   padding: 10vw 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 5em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -196,10 +200,11 @@ svg {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  gap: 1em;
 }
 
 .second-section .info .description {
-  width: 30%;
+  width: 30vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,14 +224,14 @@ svg {
 }
 
 .second-section .blue img {
-  width: 25%;
+  width: 15em;
   -webkit-box-shadow: #edfafa -25px -25px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
           box-shadow: #edfafa -25px -25px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
 }
 
 .second-section .pink img {
   margin-left: -5%;
-  width: 30%;
+  width: 16em;
   -webkit-box-shadow: #fbdedd 25px -25px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
           box-shadow: #fbdedd 25px -25px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
 }
@@ -597,7 +602,7 @@ svg {
   width: 45%;
   height: 80%;
   background-color: white;
-  opacity: 0.95;
+  opacity: 0.85;
   padding: 1.5em 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -754,7 +759,7 @@ svg {
   border: 3px solid #fbdedd;
   outline: none;
   color: #fbdedd;
-  background-color: transparent;
+  background-color: white;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
@@ -921,5 +926,32 @@ svg {
 
 [aos="fade"].aos-animate {
   opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+  .second-section {
+    padding: 15vh 10vw;
+  }
+  .second-section .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .second-section .info .description {
+    min-width: 16em;
+  }
+  .second-section .pink {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .third-section .third-background h1 {
+    font-size: 1.7rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

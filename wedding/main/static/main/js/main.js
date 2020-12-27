@@ -9,6 +9,35 @@ function endAnimation(){
 }
 
 
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
+const slider = document.querySelector('.slide-image');
+
+slider.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+    console.log()
+}, false);
+
+slider.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+}, false); 
+
+function handleGesture() {
+    if (touchendX < touchstartX) {
+        plusSlides(1)
+    }
+    if (touchendX >= touchstartX) {
+        plusSlides(-1)
+    }
+    
+}
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -54,7 +83,7 @@ function showSlides(n) {
     slideColor(selected_image.dataset.place)
 } 
   
-function showMap() {
+function showMap(e) {
     const active          = document.querySelector('.active');
     const mapContainer    = document.querySelector('.map-container');
     const maps            = mapContainer.children;
@@ -62,6 +91,7 @@ function showMap() {
     const mairiePosition  = {lat: -20.879416, lng: 55.447837};
     const mairieContainer = document.getElementById('map-mairie');
   
+    
     info.classList.remove('info-reveal')
     for (i=0; i < maps.length; i++){
         if (active.dataset.show == maps[i].dataset.show){
@@ -71,14 +101,20 @@ function showMap() {
         }
     }
     mapContainer.classList.add('info-reveal')
+    e.stopPropagation()
 }
 
-function showInfo() {
+function showInfo(e=0) {
     const mapContainer = document.querySelector('.map-container');
     const info         = document.querySelector('.steps');
+
     
     mapContainer.classList.remove('info-reveal');
     info.classList.add('info-reveal');
+    if(e!=0){
+       e.stopPropagation() 
+    }
+    
 }
 
 function slideColor(slide){

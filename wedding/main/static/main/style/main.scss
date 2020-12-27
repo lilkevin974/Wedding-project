@@ -13,6 +13,12 @@ $pink: rgb(251, 222, 221);
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
 
 section{
     height: 100vh;
@@ -171,6 +177,7 @@ svg{
             font-size: 2rem;
             font-family: $font1;
             letter-spacing: 2px;
+            white-space: nowrap;
         }
         a{
             position:absolute;
@@ -411,7 +418,7 @@ svg{
 
     .registration{
         width:45%;
-        height:80%;
+        height:fit-content;
         background-color: white;
         opacity: 0.85;
         padding:1.5em 5%;
@@ -526,7 +533,7 @@ svg{
             background-color: rgb(255, 255, 255);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-            margin: 1.8em 2em 0;
+            margin: 1.8em 2em 1.5em;
             font-family: $font1;
             font-weight: 700;
             white-space: nowrap;
@@ -640,7 +647,18 @@ svg{
     opacity: 0.85;
 }
 
-
+@media (max-width:950px){
+    .fourth-section{
+        .registration{
+            width: 70%;
+        
+            .btn{
+                font-size: 1rem;
+                padding: .5em 1em;
+            }
+        }
+    }
+}
 @media (max-width:700px) {
     .second-section{
         padding: 15vh 10vw;
@@ -658,11 +676,73 @@ svg{
 
     .third-section{
         .third-background{
+            a{
+                display: none;
+            }
             h1{
                 font-size: 1.7rem;
+                top:20%
+            }
+            .slider{
+                width:90%;
+                height: 90%;
+                left:5%;
+                .slide-image{
+                    height:70%;
+                    width:80%;
+                    position:absolute;
+                    margin:30% 10%;
+                    img {
+                        position:absolute;
+                        margin:auto;
+                        object-fit: cover;
+                        transition: opacity .8s ease-in-out, transform 1.5s ease-in-out .5s, filter .5s ease-in-out .5s;
+                        opacity:0;
+                        transform: scale(3);
+                        filter: blur(1px);
+                    } 
+                    [data-place='eglise'].opaque{
+                        transform: scale(1) translate(0%,0%);
+                    }
+                    [data-place='salle']{
+                        margin-left: -30px;
+                        transition: opacity .8s ease-in-out, transform 4s ease-in-out .5s;
+                        filter: blur(0px);
+                    }
+                    [data-place='salle']{
+                        width:300%;
+                        transform: scale(1) translateX(-20%);
+                    }
+                    [data-place='salle'].opaque{
+                        transform: scale(1) translateX(0%);
+                    }
+                }
+                .slide-info{
+                    .steps{
+                        left:50%;
+                        top:35%;
+                        background-color: rgba(0, 0, 0, 0.25);
+                        border-radius: 10px;
+                        span{
+                           color: white; 
+                        }
+                    }
+                    .info-btn{
+                        position: absolute;
+                        margin:0;
+                        top:5%;
+                        left:5%;
+                    }
+                }
             }
         }
     }
-    
-   
+
+    .fourth-section{
+        .registration{
+            width: 90%;
+            padding:1.5em 10%;
+        }
+    }
 }
+

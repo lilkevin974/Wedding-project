@@ -140,6 +140,7 @@ section {
 svg {
   height: 100%;
   z-index: -2;
+  width: 60%;
 }
 
 #group {
@@ -212,7 +213,7 @@ svg {
 }
 
 .second-section .info .description {
-  width: 30vw;
+  width: 25vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,14 +233,16 @@ svg {
 }
 
 .second-section .blue img {
-  width: 15em;
+  width: 25%;
+  min-width: 15em;
   -webkit-box-shadow: #edfafa -25px -25px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
           box-shadow: #edfafa -25px -25px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
 }
 
 .second-section .pink img {
+  width: 30%;
   margin-left: -5%;
-  width: 16em;
+  min-width: 16em;
   -webkit-box-shadow: #fbdedd 25px -25px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
           box-shadow: #fbdedd 25px -25px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
 }
@@ -676,6 +679,7 @@ svg {
 .fourth-section .registration .presence-section .input-container {
   width: 25%;
   margin-right: 3em;
+  min-width: 5.5em;
 }
 
 .fourth-section .registration .presence-section .input-container input {
@@ -940,6 +944,9 @@ svg {
 }
 
 @media (max-width: 950px) {
+  .first-section svg {
+    width: 70%;
+  }
   .fourth-section .registration {
     width: 70%;
   }
@@ -950,6 +957,9 @@ svg {
 }
 
 @media (max-width: 700px) {
+  .first-section svg {
+    width: 100%;
+  }
   .second-section {
     padding: 15vh 10vw;
   }
@@ -1004,18 +1014,17 @@ svg {
     -webkit-filter: blur(1px);
             filter: blur(1px);
   }
+  .third-section .third-background .slider .slide-image [data-place='mairie'].opaque {
+    -webkit-transform: translateY(25%) scale(1.5);
+            transform: translateY(25%) scale(1.5);
+  }
+  .third-section .third-background .slider .slide-image [data-place='eglise'] {
+    -webkit-transform: scale(2) translate(20%, -20%);
+            transform: scale(2) translate(20%, -20%);
+  }
   .third-section .third-background .slider .slide-image [data-place='eglise'].opaque {
     -webkit-transform: scale(1) translate(0%, 0%);
             transform: scale(1) translate(0%, 0%);
-  }
-  .third-section .third-background .slider .slide-image [data-place='salle'] {
-    margin-left: -30px;
-    -webkit-transition: opacity .8s ease-in-out, -webkit-transform 4s ease-in-out .5s;
-    transition: opacity .8s ease-in-out, -webkit-transform 4s ease-in-out .5s;
-    transition: opacity .8s ease-in-out, transform 4s ease-in-out .5s;
-    transition: opacity .8s ease-in-out, transform 4s ease-in-out .5s, -webkit-transform 4s ease-in-out .5s;
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
   }
   .third-section .third-background .slider .slide-image [data-place='salle'] {
     width: 300%;

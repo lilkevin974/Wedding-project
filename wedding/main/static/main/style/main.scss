@@ -85,6 +85,7 @@ section{
 svg{
     height: 100%;
     z-index: -2;
+    width:60%;
 }
 
 #group{
@@ -131,7 +132,7 @@ svg{
         height: max-content;
         gap: 1em;
         .description{
-            width:30vw;
+            width:25vw;
             display: flex;
             flex-direction: column;
             h2{
@@ -146,14 +147,16 @@ svg{
     }
    .blue{
         img{
-            width:15em;
+            width:25%;
+            min-width:15em;
             box-shadow: $blue -25px -25px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
         }  
    } 
    .pink{
         img{
+            width:30%;
             margin-left: -5%;
-            width:16em;
+            min-width:16em;
             box-shadow: $pink 25px -25px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
         }  
    } 
@@ -462,6 +465,7 @@ svg{
             .input-container{
                 width: 25%;
                 margin-right: 3em;
+                min-width: 5.5em;
                 input{
                     text-align: center;
                 }
@@ -648,6 +652,11 @@ svg{
 }
 
 @media (max-width:950px){
+    .first-section{
+        svg{
+            width:70%;
+        }
+    }
     .fourth-section{
         .registration{
             width: 70%;
@@ -660,6 +669,11 @@ svg{
     }
 }
 @media (max-width:700px) {
+    .first-section{
+        svg{
+            width:100%;
+        }
+    }
     .second-section{
         padding: 15vh 10vw;
         .info{
@@ -701,13 +715,14 @@ svg{
                         transform: scale(3);
                         filter: blur(1px);
                     } 
+                    [data-place='mairie'].opaque{
+                        transform: translateY(25%) scale(1.5);
+                    }
+                    [data-place='eglise']{
+                        transform: scale(2) translate(20%,-20%);
+                    }
                     [data-place='eglise'].opaque{
                         transform: scale(1) translate(0%,0%);
-                    }
-                    [data-place='salle']{
-                        margin-left: -30px;
-                        transition: opacity .8s ease-in-out, transform 4s ease-in-out .5s;
-                        filter: blur(0px);
                     }
                     [data-place='salle']{
                         width:300%;

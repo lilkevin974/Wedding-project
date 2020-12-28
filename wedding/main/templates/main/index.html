@@ -136,8 +136,16 @@
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuhrrV1o0g7777qiDpJbVSO0e96NDHRow&v=weekly&map_ids=17a2994719f5f1cc"></script>
     <script src="{% static 'main/js/rellax.min.js' %}"></script>
     <script>
-    // Accepts any class name
-    var rellax = new Rellax('.rellax');
+        // Accepts any class name
+        var rellax = new Rellax('.rellax');
+        function mediaQuery(x) {
+            if (x.matches) { // If media query matches
+                rellax.destroy(); 
+            }
+        }
+        var x = window.matchMedia("(max-width: 950px)")
+        mediaQuery(x) // Call listener function at run time
+        x.addListener(mediaQuery) // Attach listener function on state changes 
     </script>
 </body>
 </html>

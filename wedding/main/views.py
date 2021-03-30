@@ -28,9 +28,9 @@ def index(request):
         
         #return HttpResponse(data['first_name'])
         send_html_email(
-            subject = "Mariage d'Annaëlle et Kévin - Confirmation reçue",
+            subject = "Notre Mariage - Confirmation de présence reçue",
             template_name = 'main/email.html',
-            sender = 'contact@annaelle-et-kevin.fr',
+            sender = 'Annaëlle et Kévin <contact@annaelle-et-kevin.fr>',
             to_list = [data['email']],
         )
 

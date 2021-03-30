@@ -30,7 +30,7 @@ def index(request):
         send_html_email(
             subject = "Mariage d'Annaëlle et Kévin - Confirmation reçue",
             template_name = 'main/email.html',
-            sender = 'lilkevin@hotmail.fr',
+            sender = 'contact@annaelle-et-kevin.fr',
             to_list = [data['email']],
         )
 

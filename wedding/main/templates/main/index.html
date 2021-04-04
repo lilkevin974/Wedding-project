@@ -34,10 +34,6 @@
         window.addEventListener("load", showPage);
 
         function showPage() {document.body.classList.remove('js-loading');}
-        document.querySelectorAll('#kévin, #annaelle, #et, #group').forEach(element => element.addEventListener('animationend', endAnimation));
-        document.querySelector('#kévin').addEventListener('animationend',function(){document.body.classList.remove("disable-scroll")})
-
-        function endAnimation(){this.style.opacity='1'}
     </script>
     <!-- <img src="{% static 'main/images/background.png' %}" alt="" class="background"> -->
     <section class="first-section" class="rellax" data-rellax-speed="-2">  

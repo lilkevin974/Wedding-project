@@ -1,5 +1,3 @@
-document.body.classList.add("disable-scroll");
-
 document.querySelectorAll('#kévin, #annaelle, #et, #group').forEach(element => element.addEventListener('animationend', endAnimation));
 
 document.querySelector('#kévin').addEventListener('animationend',function(){document.body.classList.remove("disable-scroll")})

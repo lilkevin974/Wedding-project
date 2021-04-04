@@ -10,15 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round">  
     
-    <script>
-        document.body.classList.add('js-loading');
-
-        window.addEventListener("load", showPage);
-
-        function showPage() {
-            document.body.classList.remove('js-loading');
-        }
-    </script>
+   
     <script src="{% static 'main/js/rellax.min.js' %}"></script>
     <script>
         // Accepts any class name
@@ -36,7 +28,16 @@
 
 
 
-<body>
+<body> 
+    <script>
+        document.body.classList.add('js-loading');
+
+        window.addEventListener("load", showPage);
+
+        function showPage() {
+            document.body.classList.remove('js-loading');
+        }
+    </script>
     <!-- <img src="{% static 'main/images/background.png' %}" alt="" class="background"> -->
     <section class="first-section" class="rellax" data-rellax-speed="-2">  
         {% include 'main/svg.html' %}    

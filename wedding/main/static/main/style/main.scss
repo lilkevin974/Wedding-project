@@ -745,8 +745,10 @@ svg{
                     }
                 }
                 .slide-info{
+                    width: 100%;
                     .steps{
-                        left:50%;
+                        width: 50%;
+                        left:0;
                         top:35%;
                         background-color: rgba(0, 0, 0, 0.25);
                         border-radius: 10px;
@@ -760,6 +762,11 @@ svg{
                         top:5%;
                         left:5%;
                     }
+                }
+                .map-container{
+                    height: 70%;
+                    width: 80%;
+                    
                 }
             }
         }

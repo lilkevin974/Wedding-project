@@ -29,7 +29,7 @@
 <body> 
     <script>
         document.body.classList.add('js-loading');
-        document.body.classList.add("disable-scroll");
+        document.getElementsByTagName("html")[0].classList.add("disable-scroll")
 
         window.addEventListener("load", showPage);
 

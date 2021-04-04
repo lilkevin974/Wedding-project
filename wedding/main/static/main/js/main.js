@@ -1,6 +1,6 @@
 document.querySelectorAll('#kévin, #annaelle, #et, #group').forEach(element => element.addEventListener('animationend', endAnimation));
 
-document.querySelector('#kévin').addEventListener('animationend',function(){document.body.classList.remove("disable-scroll")})
+document.querySelector('#kévin').addEventListener('animationend',function(){document.getElementsByTagName("html")[0].classList.remove("disable-scroll")})
 
 function endAnimation(){
     this.style.opacity='1'   

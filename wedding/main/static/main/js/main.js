@@ -100,14 +100,10 @@ function showMap(e) {
     info.classList.remove('info-reveal')
     activeMap.classList.remove('activeMap')
     for (i=0; i < maps.length; i++){
-        console.log(maps[i].id)
-        console.log(maps[i])
         if (active.dataset.show == maps[i].dataset.show){
             if (active.dataset.show == 'mairie'){initMap(mairiePosition,mairieContainer); mapsId = document.getElementById(maps[i].id)}
             else if (active.dataset.show == 'eglise'){initMap(eglisePosition,egliseContainer); mapsId = document.getElementById(maps[i].id)}
             else if (active.dataset.show == 'salle'){initMap(sallePosition,salleContainer); mapsId = document.getElementById(maps[i].id)}
-            console.log(active.dataset.show)
-            console.log(maps[i].dataset.show)
             break;
         }
     }

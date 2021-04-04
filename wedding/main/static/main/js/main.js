@@ -14,7 +14,7 @@ let touchstartY = 0;
 let touchendX = 0;
 let touchendY = 0;
 
-const slider = document.querySelector('.slide-image');
+const slider = document.querySelector('.third-section');
 
 slider.addEventListener('touchstart', function(event) {
     touchstartX = event.changedTouches[0].screenX;

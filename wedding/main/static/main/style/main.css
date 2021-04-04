@@ -1055,7 +1055,7 @@ svg {
   }
   .third-section .third-background .slider .slide-info .steps {
     width: 50%;
-    left: 0;
+    left: 25%;
     top: 35%;
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 10px;

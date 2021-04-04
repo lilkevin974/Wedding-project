@@ -97,7 +97,7 @@ function showMap(e) {
     
     info.classList.remove('info-reveal')
     if (window.matchMedia("(max-width: 700px)").matches) {
-        document.querySelector("slide-image").classList.add("slide-hide")
+        document.querySelector(".slide-image").classList.add("slide-hide")
       }
     activeMap.classList.remove('activeMap')
     for (i=0; i < maps.length; i++){
@@ -120,7 +120,7 @@ function showInfo(e=0) {
     
     mapContainer.classList.remove('info-reveal');
     if (window.matchMedia("(max-width: 700px)").matches) {
-        document.querySelector("slide-image").classList.remove("slide-hide")
+        document.querySelector(".slide-image").classList.remove("slide-hide")
       }
     info.classList.add('info-reveal');
     if(e!=0){

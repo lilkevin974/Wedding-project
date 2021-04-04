@@ -371,6 +371,9 @@ svg {
   margin: 3.5em 3em;
   overflow: hidden;
   border-radius: 12px;
+  opacity: 1;
+  -webkit-transition: opacity .8s ease-in-out;
+  transition: opacity .8s ease-in-out;
 }
 
 .third-section .third-background .slider .slide-image img {
@@ -432,6 +435,10 @@ svg {
 .third-section .third-background .slider .slide-image [data-place='salle'].opaque {
   -webkit-transform: scale(1.5) translateX(15%);
           transform: scale(1.5) translateX(15%);
+}
+
+.third-section .third-background .slider .slide-hide {
+  opacity: 0;
 }
 
 .third-section .third-background .slider .slide-info {

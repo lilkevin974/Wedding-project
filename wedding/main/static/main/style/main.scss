@@ -262,6 +262,8 @@ svg{
                 margin:3.5em 3em;
                 overflow: hidden;
                 border-radius: 12px;
+                opacity: 1;
+                transition: opacity .8s ease-in-out;
                 img {
                     position:absolute;
                     width:100%;
@@ -296,6 +298,9 @@ svg{
                 [data-place='salle'].opaque{
                     transform: scale(1.5) translateX(15%);
                 }
+            }
+            .slide-hide{
+                opacity: 0;
             }
             .slide-info{
                 padding:1em 1em 1em 0;

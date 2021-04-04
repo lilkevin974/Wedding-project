@@ -12,7 +12,7 @@ let touchstartY = 0;
 let touchendX = 0;
 let touchendY = 0;
 
-const slider = document.querySelector('.third-section');
+const slider = document.querySelector('.slider');
 
 slider.addEventListener('touchstart', function(event) {
     touchstartX = event.changedTouches[0].screenX;
@@ -30,7 +30,7 @@ function handleGesture() {
     if (touchendX < touchstartX) {
         plusSlides(1)
     }
-    if (touchendX >= touchstartX) {
+    if (touchendX > touchstartX) {
         plusSlides(-1)
     }
     
@@ -96,6 +96,9 @@ function showMap(e) {
   
     
     info.classList.remove('info-reveal')
+    if (window.matchMedia("(max-width: 700px)").matches) {
+        document.querySelector("slide-image").classList.add("slide-hide")
+      }
     activeMap.classList.remove('activeMap')
     for (i=0; i < maps.length; i++){
         if (active.dataset.show == maps[i].dataset.show){
@@ -116,6 +119,9 @@ function showInfo(e=0) {
 
     
     mapContainer.classList.remove('info-reveal');
+    if (window.matchMedia("(max-width: 700px)").matches) {
+        document.querySelector("slide-image").classList.remove("slide-hide")
+      }
     info.classList.add('info-reveal');
     if(e!=0){
        e.stopPropagation() 

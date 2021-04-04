@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="{% static 'main/style/main.css' %}"> 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round">  
+    <script src="{% static 'main/js/rellax.min.js' %}"></script>
+    <script>
+        // Accepts any class name
+        var rellax = new Rellax('.rellax');
+        function mediaQuery(x) {
+            if (x.matches) { // If media query matches
+                rellax.destroy(); 
+            }
+        }
+        var x = window.matchMedia("(max-width: 950px)")
+        mediaQuery(x) // Call listener function at run time
+        x.addListener(mediaQuery) // Attach listener function on state changes 
+    </script>
 </head>
 
 
@@ -134,19 +147,7 @@
         });   
     </script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY&map_ids=17a2994719f5f1cc"></script>
-    <script src="{% static 'main/js/rellax.min.js' %}"></script>
-    <script>
-        // Accepts any class name
-        var rellax = new Rellax('.rellax');
-        function mediaQuery(x) {
-            if (x.matches) { // If media query matches
-                rellax.destroy(); 
-            }
-        }
-        var x = window.matchMedia("(max-width: 950px)")
-        mediaQuery(x) // Call listener function at run time
-        x.addListener(mediaQuery) // Attach listener function on state changes 
-    </script>
+    
 </body>
 </html>
     

@@ -20,6 +20,12 @@ body{
     overflow-x: hidden;
 }
 
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
+
 section{
     height: 100vh;
     width: 92%;

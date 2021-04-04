@@ -347,7 +347,7 @@ svg{
                     opacity: 0;
                     margin:1em;
                     transition: opacity 1s ease-in-out;
-                    #map-mairie{
+                    .activeMap{
                         height: 100%;
                         width: 100%;
                         border-radius: 10px;
@@ -589,6 +589,7 @@ svg{
     }
     .confirmation{
         width:50%;
+        min-width: 300px;
         height:70%;
         background-color: white;
         padding:1.5em 5%;
@@ -754,9 +755,22 @@ svg{
     }
 
     .fourth-section{
+        background-image: url("../images/Love 45.jpg");
         .registration{
             width: 90%;
             padding:1.5em 10%;
+        }
+        .confirmation{
+            width: 100%;
+            .confirmation-text{
+                h1{
+                    font-size: 1.2rem;
+                    margin: 0;
+                }
+                h2{
+                    font-size: 1.2rem;
+                }
+            }
         }
     }
 }

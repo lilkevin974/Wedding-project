@@ -518,7 +518,7 @@ svg {
   transition: opacity 1s ease-in-out;
 }
 
-.third-section .third-background .slider .slide-info .map-container #map-mairie {
+.third-section .third-background .slider .slide-info .map-container .activeMap {
   height: 100%;
   width: 100%;
   border-radius: 10px;
@@ -853,6 +853,7 @@ svg {
 
 .fourth-section .confirmation {
   width: 50%;
+  min-width: 300px;
   height: 70%;
   background-color: white;
   padding: 1.5em 5%;
@@ -1050,9 +1051,22 @@ svg {
     top: 5%;
     left: 5%;
   }
+  .fourth-section {
+    background-image: url("../images/Love 45.jpg");
+  }
   .fourth-section .registration {
     width: 90%;
     padding: 1.5em 10%;
+  }
+  .fourth-section .confirmation {
+    width: 100%;
+  }
+  .fourth-section .confirmation .confirmation-text h1 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .fourth-section .confirmation .confirmation-text h2 {
+    font-size: 1.2rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

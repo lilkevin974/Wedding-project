@@ -88,18 +88,30 @@ function showMap(e) {
     const mapContainer    = document.querySelector('.map-container');
     const maps            = mapContainer.children;
     const info            = document.querySelector('.info-reveal');
+    const activeMap       = document.querySelector('.activeMap')
     const mairiePosition  = {lat: -20.879416, lng: 55.447837};
     const mairieContainer = document.getElementById('map-mairie');
+    const eglisePosition  = {lat: -20.883818986105087, lng: 55.45866714106996}; 
+    const egliseContainer = document.getElementById('map-eglise');
+    const sallePosition   = {lat: -20.94285485312177, lng: 55.63389676426542}; 
+    const salleContainer  = document.getElementById('map-salle');
   
     
     info.classList.remove('info-reveal')
+    activeMap.classList.remove('activeMap')
     for (i=0; i < maps.length; i++){
+        console.log(maps[i].id)
+        console.log(maps[i])
         if (active.dataset.show == maps[i].dataset.show){
-            if (active.dataset.show == 'mairie'){
-                initMap(mairiePosition,mairieContainer)
-            }
+            if (active.dataset.show == 'mairie'){initMap(mairiePosition,mairieContainer); mapsId = document.getElementById(maps[i].id)}
+            else if (active.dataset.show == 'eglise'){initMap(eglisePosition,egliseContainer); mapsId = document.getElementById(maps[i].id)}
+            else if (active.dataset.show == 'salle'){initMap(sallePosition,salleContainer); mapsId = document.getElementById(maps[i].id)}
+            console.log(active.dataset.show)
+            console.log(maps[i].dataset.show)
+            break;
         }
     }
+    mapsId.classList.add('activeMap')
     mapContainer.classList.add('info-reveal')
     e.stopPropagation()
 }
@@ -217,12 +229,13 @@ function ValidateEmail(inputText){
 function initMap(position,container) {
     // The location of Uluru
     var mairie = {lat: -20.879416, lng: 55.447837};
+    var eglise  = {lat: -19.879416, lng: 53.447837};
     // The map, centered at Uluru
     var map = new google.maps.Map(
-        document.getElementById('map-mairie'), {
+        container, {
             mapId: '17a2994719f5f1cc',
             zoom: 15,
-            center: mairie,
+            center: position,
             disableDefaultUI: true,
             zoomControl: true,
             scaleControl: true,
@@ -230,6 +243,6 @@ function initMap(position,container) {
             fullscreenControl: true
         });
     // The marker, positioned at Uluru
-    var marker = new google.maps.Marker({position: mairie, map: map});
+    var marker = new google.maps.Marker({position: position, map: map});
   }
   

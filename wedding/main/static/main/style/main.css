@@ -1051,6 +1051,7 @@ svg {
             transform: scale(1) translateX(0%);
   }
   .third-section .third-background .slider .slide-info {
+    padding: 0;
     width: 100%;
   }
   .third-section .third-background .slider .slide-info .steps {
@@ -1072,6 +1073,8 @@ svg {
   .third-section .third-background .slider .map-container {
     height: 70%;
     width: 80%;
+    top: 0;
+    margin: 30% 10%;
   }
   .fourth-section {
     background-image: url("../images/Love 45.jpg");

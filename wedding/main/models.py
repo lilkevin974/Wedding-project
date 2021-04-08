@@ -3,7 +3,6 @@ from django.db import models
 from twilio.rest import Client
 # Create your models here.
 
-
 env = environ.Env()
 environ.Env.read_env()
 # Create your models here.
@@ -17,11 +16,18 @@ class Confirmation(models.Model):
     message=models.CharField(max_length=200)
 
 class TwilioSms(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    surname = models.CharField(max_length=30)
-    category = models.CharField(max_length=30)
-    number = models.CharField(max_length=30)
+
+    CATEGORY= (
+        ('C', 'Create'),
+        ('S1', 'First Send'),
+        ('S2', 'Second Send'),
+    )
+
+    first_name = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=20)
+    surname = models.CharField(max_length=20)
+    category = models.CharField(max_length=2, choices=CATEGORY)
+    number = models.CharField(max_length=20)
 
     def save(self, *args, **kwargs):
 
@@ -29,10 +35,15 @@ class TwilioSms(models.Model):
         auth_token = env('TWILIO_AUTH_TOKEN')
 
         client = Client(account_sid, auth_token)
-
-        client.api.account.messages.create(
-            to=f"{self.number}",
-            from_="+14153197987",
-            body="Hello there!")
+        if self.category == 'S1':
+            client.api.account.messages.create(
+                to=f"{self.number}",
+                from_="+14153197987",
+                body=f"Hello {self.surname}!")
+        elif self.category == 'S2':
+            client.api.account.messages.create(
+                to=f"{self.number}",
+                from_="+14153197987",
+                body="Hello send!")
 
         super().save(*args, **kwargs)

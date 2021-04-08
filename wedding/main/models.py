@@ -18,9 +18,9 @@ class Confirmation(models.Model):
 class TwilioSms(models.Model):
 
     CATEGORY= (
-        ('C', 'Create'),
-        ('S1', 'First Send'),
-        ('S2', 'Second Send'),
+        ('C', 'Créé'),
+        ('I1', 'Invitation 1'),
+        ('I2', 'Invitation 2'),
     )
 
     first_name = models.CharField(max_length=20)
@@ -47,3 +47,8 @@ class TwilioSms(models.Model):
                 body="Hello send!")
 
         super().save(*args, **kwargs)
+    def __str__(self):
+        if self.category == 'S1' or self.category == 'S2':
+            return f"L'{self.category} a été envoyée à {self.last_name} {self.first_name}"
+        else :
+            return f"{self.last_name} {self.first_name} a été ajouté"

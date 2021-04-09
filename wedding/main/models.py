@@ -39,6 +39,7 @@ class TwilioSms(models.Model):
                 body="Hello send!")
 
         super().save(*args, **kwargs)
+    
     def __str__(self):
         if self.category == 'S1' or self.category == 'S2':
             return f"L'{self.category} a été envoyée à {self.last_name} {self.first_name}"
@@ -46,7 +47,7 @@ class TwilioSms(models.Model):
             return f"{self.last_name} {self.first_name} a été ajouté"
 
 class Confirmation(models.Model):
-    famille=models.OneToOneField(TwilioSms,on_delete=models.PROTECT, blank=True)
+    famille=models.OneToOneField(TwilioSms,on_delete=models.PROTECT, null=True)
     email=models.CharField(max_length=50)
     last_name=models.CharField(max_length=20)
     first_name=models.CharField(max_length=20)

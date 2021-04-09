@@ -39,7 +39,7 @@ class TwilioSms(models.Model):
                 to=f"{self.number}",
                 from_="+14153197987",
                 status_callback='http://www.annaelle-et-kevin.fr/sms/status',
-                body="Hello send!")
+                body=f"Bonjour {self.surname},\nNous nous disons OUI!\nNous sommes heureux de vous convier à notre mariage qui aura lieu le 27 août 2021. Pour plus d'informations et afin de confirmer votre présence, nous vous invitons à vous rendre directement sur notre site www.annaelle-et-kevin.fr.\nAnnaëlle et Kévin")
 
         super().save(*args, **kwargs)
     

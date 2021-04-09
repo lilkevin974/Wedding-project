@@ -27,12 +27,12 @@ class TwilioSms(models.Model):
         auth_token = env('TWILIO_AUTH_TOKEN')
 
         client = Client(account_sid, auth_token)
-        if self.category == 'S1':
+        if self.category == 'I1':
             client.api.account.messages.create(
                 to=f"{self.number}",
                 from_="+14153197987",
                 body=f"Hello {self.surname}!")
-        elif self.category == 'S2':
+        elif self.category == 'I2':
             client.api.account.messages.create(
                 to=f"{self.number}",
                 from_="+14153197987",
@@ -41,7 +41,7 @@ class TwilioSms(models.Model):
         super().save(*args, **kwargs)
     
     def __str__(self):
-        if self.category == 'S1' or self.category == 'S2':
+        if self.category == 'I1' or self.category == 'I2':
             return f"L'{self.category} a été envoyée à {self.last_name} {self.first_name}"
         else :
             return f"{self.last_name} {self.first_name} a été ajouté"

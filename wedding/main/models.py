@@ -32,13 +32,13 @@ class TwilioSms(models.Model):
             client.api.account.messages.create(
                 to=f"{self.number}",
                 from_="+14153197987",
-                status_callback='http://www.annaelle-et-kevin.fr/status/sms',
+                status_callback='http://www.annaelle-et-kevin.fr/sms/status',
                 body=f"Hello {self.surname}!")
         elif self.category == 'I2':
             client.api.account.messages.create(
                 to=f"{self.number}",
                 from_="+14153197987",
-                status_callback='http://www.annaelle-et-kevin.fr/status/sms',
+                status_callback='http://www.annaelle-et-kevin.fr/sms/status',
                 body="Hello send!")
 
         super().save(*args, **kwargs)

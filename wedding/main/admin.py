@@ -6,7 +6,7 @@ admin.site.register(Confirmation)
 
 
 class SmsAdmin(admin.ModelAdmin):
-    list_display = ('fullname', 'surname')
+    list_display = ('fullname', 'surname', 'number', 'category')
     list_editable = ('number','category')
     list_filter = ('category')
 

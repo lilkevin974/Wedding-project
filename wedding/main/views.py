@@ -3,8 +3,9 @@ import json
 from django.http import HttpResponse
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.shortcuts import render
-from main.models import Confirmation
+from main.models import Confirmation, TwilioSms
 from main.send_email import send_html_email
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
@@ -36,3 +37,13 @@ def index(request):
 
 
     return render(request, 'main/index.html')
+
+@csrf_exempt
+def smsstatus(request):
+    if request.method=="POST":
+        """ message_sid = request.POST.get('MessageSid') """
+        message_status = request.POST.get('MessageStatus')
+        to = request.POST.get('To')
+        TwilioSms.objects.filter(number=to).update(status=message_status)
+
+        return HttpResponse(status=200)

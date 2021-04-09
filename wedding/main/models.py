@@ -20,6 +20,7 @@ class TwilioSms(models.Model):
     surname = models.CharField(max_length=20)
     category = models.CharField(max_length=2, choices=CATEGORY)
     number = models.CharField(max_length=20)
+    status = models.CharField(max_length=20, blank=True)
 
     def save(self, *args, **kwargs):
 
@@ -31,18 +32,20 @@ class TwilioSms(models.Model):
             client.api.account.messages.create(
                 to=f"{self.number}",
                 from_="+14153197987",
+                status_callback='http://www.annaelle-et-kevin.fr/status/sms',
                 body=f"Hello {self.surname}!")
         elif self.category == 'I2':
             client.api.account.messages.create(
                 to=f"{self.number}",
                 from_="+14153197987",
+                status_callback='http://www.annaelle-et-kevin.fr/status/sms',
                 body="Hello send!")
 
         super().save(*args, **kwargs)
     
     def __str__(self):
         if self.category == 'I1' or self.category == 'I2':
-            return f"L'{self.category} a été envoyée à {self.last_name} {self.first_name}"
+            return f"L'invitation {self.category} a été envoyée à {self.last_name} {self.first_name}"
         else :
             return f"{self.last_name} {self.first_name} a été ajouté"
 

@@ -7,14 +7,6 @@ env = environ.Env()
 environ.Env.read_env()
 # Create your models here.
 
-class Confirmation(models.Model):
-    email=models.CharField(max_length=50)
-    last_name=models.CharField(max_length=20)
-    first_name=models.CharField(max_length=20)
-    adults=models.IntegerField()
-    children=models.IntegerField()
-    message=models.CharField(max_length=200)
-
 class TwilioSms(models.Model):
 
     CATEGORY= (
@@ -52,3 +44,12 @@ class TwilioSms(models.Model):
             return f"L'{self.category} a été envoyée à {self.last_name} {self.first_name}"
         else :
             return f"{self.last_name} {self.first_name} a été ajouté"
+
+class Confirmation(models.Model):
+    famille=models.OneToOneField(TwilioSms,on_delete=models.PROTECT,primary_key=True, blank=True)
+    email=models.CharField(max_length=50)
+    last_name=models.CharField(max_length=20)
+    first_name=models.CharField(max_length=20)
+    adults=models.IntegerField()
+    children=models.IntegerField()
+    message=models.CharField(max_length=200)

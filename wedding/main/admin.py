@@ -6,9 +6,9 @@ admin.site.register(Confirmation)
 
 
 class SmsAdmin(admin.ModelAdmin):
-    list_display('fullname', 'surname')
-    list_editable('number','category')
-    list_filter('category')
+    list_display = ('fullname', 'surname')
+    list_editable = ('number','category')
+    list_filter = ('category')
 
     def fullname(self,obj):
         return "{} {}".format(obj.last_name, obj.first_name)

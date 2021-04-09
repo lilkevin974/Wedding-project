@@ -46,7 +46,7 @@ class TwilioSms(models.Model):
             return f"{self.last_name} {self.first_name} a été ajouté"
 
 class Confirmation(models.Model):
-    famille=models.OneToOneField(TwilioSms,on_delete=models.PROTECT,primary_key=True, blank=True)
+    famille=models.OneToOneField(TwilioSms,on_delete=models.PROTECT, blank=True)
     email=models.CharField(max_length=50)
     last_name=models.CharField(max_length=20)
     first_name=models.CharField(max_length=20)

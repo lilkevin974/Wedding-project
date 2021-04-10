@@ -32,6 +32,7 @@ def index(request):
         send_html_email(
             subject = "Notre Mariage - Confirmation de présence reçue",
             template_name = 'main/email.html',
+            first_name = {"first_name":data['first_name']},
             sender = 'Annaëlle et Kévin <contact@annaelle-et-kevin.fr>',
             to_list = [data['email']],
         )

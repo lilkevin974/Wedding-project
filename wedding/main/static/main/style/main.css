@@ -266,6 +266,12 @@ svg {
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
 }
 
+.second-section .pink p {
+  font-size: 1.2em;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+  color: #c89f9f;
+}
+
 .third-section {
   width: 100%;
   height: 110vh;

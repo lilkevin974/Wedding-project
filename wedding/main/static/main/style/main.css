@@ -233,7 +233,6 @@ svg {
 .second-section .info .description h2 {
   font-family: "Sail", cursive;
   padding: 0.5em 0;
-  color: #7c7c7a;
 }
 
 .second-section .info .description p {
@@ -247,12 +246,22 @@ svg {
           box-shadow: #edfafa -25px -25px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
 }
 
+.second-section .blue h2 {
+  color: #edfafa;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
 .second-section .pink img {
   width: 30%;
   margin-left: -5%;
   min-width: 16em;
   -webkit-box-shadow: #fbdedd 25px -25px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
           box-shadow: #fbdedd 25px -25px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
+}
+
+.second-section .pink h2 {
+  color: #fbdedd;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
 }
 
 .third-section {

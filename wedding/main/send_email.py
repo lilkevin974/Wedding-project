@@ -8,3 +8,7 @@ def send_html_email(to_list, subject, template_name, context='', sender=settings
     msg.content_subtype = "html"  # Main content is now text/html
     return msg.send()
 
+
+
+
+

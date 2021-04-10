@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.shortcuts import render
 from main.models import Confirmation, TwilioSms
+from django.core.mail import send_mail
 from main.send_email import send_html_email
 from django.views.decorators.csrf import csrf_exempt
 
@@ -34,7 +35,13 @@ def index(request):
             sender = 'Annaëlle et Kévin <contact@annaelle-et-kevin.fr>',
             to_list = [data['email']],
         )
-
+        send_mail(
+            f'Confirmation de {data["last_name"]} {data["first_name"]}',
+            f'Confirmation :\nInvité : {data["last_name"]} {data["first_name"]}\nNombre d\'adultes : {data["adults"]}\nNombre d\'enfants : {data["children"]}\nMessage : {data["message"]}',
+            'Annaëlle et Kévin <contact@annaelle-et-kevin.fr>',
+            ['lilkevin@hotmail.fr'],
+            fail_silently=True,
+        )
 
     return render(request, 'main/index.html')
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Quattrocento:wght@400;700&family=Sail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Quattrocento:wght@400;700&family=Sail&display=swap&family=Dancing+Script:wght@400;700&display=swap');
 
 $title-font:'Sail', cursive;
 $font1: 'Quattrocento', serif;
@@ -142,11 +142,13 @@ svg{
             display: flex;
             flex-direction: column;
             h2{
-                font-family: $title-font;
+                font-family: 'Dancing Script', cursive;
                 padding:0.5em 0;
+                font-weight: 700;
             }
             p{
-                font-family: $font2;
+                font-family: 'Dancing Script', cursive;
+                font-weight: 400;
             }
         }
              

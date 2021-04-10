@@ -181,7 +181,7 @@ function confirmation(){
         alert("Oups! Tu as oublié ton prénom!")
     }
     else {
-        document.getElementById(".btn").disabled = true; 
+        document.querySelector(".btn").disabled = true; 
         const xhttp = new XMLHttpRequest();
         xhttp.open('POST', '/')
         xhttp.setRequestHeader("X-CSRFToken",  getCookie('csrftoken')); 

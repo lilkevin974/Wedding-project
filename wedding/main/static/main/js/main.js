@@ -182,20 +182,18 @@ function confirmation(){
     }
     else {
         document.querySelector(".btn").disabled = true; 
+        const registration = document.querySelector(".registration");
+        const confirmation = document.querySelector(".confirmation")
+        confirmation.querySelector('h1').innerHTML=`Merci ${data.first_name} pour ta confirmation!`;
+        registration.style.animation='scale-down .8s forwards'
+        registration.addEventListener('animationend', ()=> {
+            registration.style.display='none'
+            confirmation.style.display='flex'
+            confirmation.style.animation='scale-up .8s forwards'
+        })    
         const xhttp = new XMLHttpRequest();
         xhttp.open('POST', '/')
         xhttp.setRequestHeader("X-CSRFToken",  getCookie('csrftoken')); 
-        xhttp.onload = () => {
-            const registration = document.querySelector(".registration");
-            const confirmation = document.querySelector(".confirmation")
-            confirmation.querySelector('h1').innerHTML=`Merci ${data.first_name} pour ta confirmation!`;
-            registration.style.animation='scale-down .8s forwards'
-            registration.addEventListener('animationend', ()=> {
-                registration.style.display='none'
-                confirmation.style.display='flex'
-                confirmation.style.animation='scale-up .8s forwards'
-            })    
-        }
 
         j_data=JSON.stringify(data)
 

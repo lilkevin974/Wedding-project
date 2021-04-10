@@ -33,21 +33,19 @@ class TwilioSms(models.Model):
                 to=f"{self.number}",
                 from_="+14153197987",
                 status_callback='http://www.annaelle-et-kevin.fr/sms/status',
-                body=f"Hello {self.surname}!")
+                body=f"Bonjour {self.surname},\n\nNous nous disons OUI!\nNous sommes heureux de vous convier à notre mariage qui aura lieu le 27 août 2021. Pour plus d'informations et afin de confirmer votre présence, nous vous invitons à vous rendre directement sur notre site www.annaelle-et-kevin.fr.\n\nAnnaëlle et Kévin\n0692018205")
         elif self.category == 'I2':
             client.api.account.messages.create(
                 to=f"{self.number}",
                 from_="+14153197987",
                 status_callback='http://www.annaelle-et-kevin.fr/sms/status',
-                body=f"Bonjour {self.surname},\nNous nous disons OUI!\nNous sommes heureux de vous convier à notre mariage qui aura lieu le 27 août 2021. Pour plus d'informations et afin de confirmer votre présence, nous vous invitons à vous rendre directement sur notre site www.annaelle-et-kevin.fr.\nAnnaëlle et Kévin")
+                body=f"Bonjour {self.surname},\n\nNous nous disons OUI!\nNous sommes heureux de vous convier à notre mariage qui aura lieu le 27 août 2021. Pour plus d'informations et afin de confirmer votre présence, nous vous invitons à vous rendre directement sur notre site www.annaelle-et-kevin.fr.\n\nAnnaëlle et Kévin\n0699100086")
 
         super().save(*args, **kwargs)
     
     def __str__(self):
-        if self.category == 'I1' or self.category == 'I2':
-            return f"L'invitation {self.category} a été envoyée à {self.last_name} {self.first_name}"
-        else :
-            return f"{self.last_name} {self.first_name} a été ajouté"
+            first_letter=str(self.first_name)[0]
+            return f"{self.last_name} {first_letter}"
 
 class Confirmation(models.Model):
     family=models.OneToOneField(TwilioSms, on_delete=models.PROTECT, null=True)

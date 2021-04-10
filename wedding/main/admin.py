@@ -2,7 +2,6 @@ from django.contrib import admin
 from main.models import Confirmation, TwilioSms
 
 # Register your models here.
-admin.site.register(Confirmation)
 
 
 class SmsAdmin(admin.ModelAdmin):
@@ -13,4 +12,11 @@ class SmsAdmin(admin.ModelAdmin):
     def fullname(self,obj):
         return "{} {}".format(obj.last_name, obj.first_name)
 
+class ConfirmationAdmin(admin.ModelAdmin):
+    list_display = ('fullname','family', 'email', 'adults', 'children')
+
+    def fullname(self,obj):
+        return "{} {}".format(obj.last_name, obj.first_name)
+
 admin.site.register(TwilioSms, SmsAdmin)
+admin.site.register(Confirmation, ConfirmationAdmin)

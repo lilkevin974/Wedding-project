@@ -893,7 +893,7 @@ svg {
   -webkit-transform: scaleX(0%) scaleY(0%);
           transform: scaleX(0%) scaleY(0%);
   position: relative;
-  font-family: "Sail", cursive;
+  font-family: 'Dancing Script', cursive;
 }
 
 .fourth-section .confirmation img {
@@ -930,14 +930,16 @@ svg {
 
 .fourth-section .confirmation .confirmation-text h1 {
   font-size: 1.5rem;
-  color: #fccaca;
+  color: #b99796;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
   margin: 1em;
 }
 
 .fourth-section .confirmation .confirmation-text h2 {
   margin: 1em;
   font-size: 1.2rem;
-  color: #b6e9e9;
+  color: #a0b3b3;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
 }
 
 @-webkit-keyframes scale-up {

@@ -14,6 +14,7 @@ class SmsAdmin(admin.ModelAdmin):
 
 class ConfirmationAdmin(admin.ModelAdmin):
     list_display = ('fullname','family', 'email', 'adults', 'children')
+    list_editable = ('family')
 
     def fullname(self,obj):
         return "{} {}".format(obj.last_name, obj.first_name)

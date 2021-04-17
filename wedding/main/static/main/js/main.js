@@ -184,7 +184,7 @@ function confirmation(){
         document.querySelector(".btn").disabled = true; 
         const registration = document.querySelector(".registration");
         const confirmation = document.querySelector(".confirmation")
-        confirmation.querySelector('h1').innerHTML=`Merci ${data.first_name} pour ta confirmation!`;
+        confirmation.querySelector('h1').innerHTML=`Merci ${data.first_name} pour ta réponse!`;
         registration.style.animation='scale-down .8s forwards'
         registration.addEventListener('animationend', ()=> {
             registration.style.display='none'

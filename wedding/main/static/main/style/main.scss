@@ -515,7 +515,7 @@ svg{
             font-family: $font1;
             font-weight: 300;
             font-size:.8rem;
-            padding:7px 0;
+            padding:.5rem 0;
             border: 0;
             border-bottom: 2px solid darkgray;
             outline: none;
@@ -554,7 +554,7 @@ svg{
           }
 
         .btn{
-            padding: .5em 2em;
+            padding: .5rem 2rem;
             font-size: 1.5rem;
             cursor: pointer;
             position: relative;
@@ -568,7 +568,7 @@ svg{
             font-family: $font1;
             font-weight: 700;
             white-space: nowrap;
-            transition: border-color 0.5s ease, color 0.5s ease ;
+            transition: border-color 0.5s ease, color 0.5s ease;
             &--future {
                 &::after, &::before {
                     content: "";

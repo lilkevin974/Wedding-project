@@ -569,7 +569,7 @@ svg {
   display: flex;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin: 2.5rem 1rem;
+  margin: 2vh 1vh;
   z-index: 2;
 }
 
@@ -596,7 +596,7 @@ svg {
 }
 
 .third-section .third-background .slider .slide-info .info-btn .show i {
-  font-size: 30px;
+  font-size: 1.8rem;
   color: #7c7c7a;
   pointer-events: none;
 }
@@ -611,8 +611,8 @@ svg {
 
 .third-section .dot-container .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 1rem;
+  width: 1rem;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;

@@ -15,6 +15,7 @@ $pink: rgb(251, 222, 221);
 }
 html{
     overflow-x: hidden;
+    font-size: 1em;
 }
 body{
     overflow-x: hidden;
@@ -129,21 +130,21 @@ svg{
     background-color: white;
     padding:10vw 10vh;
     display: flex;
-    gap: 5em;
+    gap: 5rem;
     flex-direction: column;
     justify-content: space-between;
     .info{
         display: flex;
         justify-content: space-around;
         height: max-content;
-        gap: 1em;
+        gap: 1rem;
         .description{
             width:25vw;
             display: flex;
             flex-direction: column;
             h2{
                 font-family: 'Dancing Script', cursive;
-                padding:0.5em 0;
+                padding:0.5rem 0;
                 font-weight: 700;
             }
             p{
@@ -156,7 +157,7 @@ svg{
    .blue{
         img{
             width:25%;
-            min-width:15em;
+            min-width:15rem;
             box-shadow: $blue -25px -25px, rgba(0, 0, 0, 0.25) 3px 3px 3px;
         }  
         h2{
@@ -168,7 +169,7 @@ svg{
         img{
             width:30%;
             margin-left: -5%;
-            min-width:16em;
+            min-width:16rem;
             box-shadow: $pink 25px -25px, rgba(0, 0, 0, 0.25) -3px 3px 3px;
         }  
         h2{
@@ -176,7 +177,7 @@ svg{
             text-shadow:  3px 3px 3px rgba(0, 0, 0, 0.25);
         }
         p{
-            font-size:1.2em;
+            font-size:1.2rem;
             text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
             color: #c89f9f;
         }
@@ -186,6 +187,7 @@ svg{
 .third-section{
     width: 100%;
     height: 110vh;
+    min-height: 500px;
     position: relative;
     .third-background{
         width: 100%;
@@ -235,6 +237,7 @@ svg{
         .slider{
             width: 65%;
             height:100%;
+            min-height: 350px;
             background-color: white;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 12px;
@@ -248,9 +251,9 @@ svg{
                 font-size: 1.8rem;
                 top:5%;
                 right: -17px;
-                width: 5.5em;
-                height: 2em;
-                line-height: 2.2em;
+                width: 5.5rem;
+                height: 2rem;
+                line-height: 2.2rem;
                 color: rgba(124, 124, 122, 1);
                 letter-spacing: 1px;
                 background-color: #f1faf9;
@@ -274,7 +277,7 @@ svg{
                 height:75%;
                 width:45%;
                 position:relative;
-                margin:3.5em 3em;
+                margin:3.5rem 3rem;
                 overflow: hidden;
                 border-radius: 12px;
                 opacity: 1;
@@ -318,7 +321,7 @@ svg{
                 opacity: 0;
             }
             .slide-info{
-                padding:1em 1em 1em 0;
+                padding:1rem 1rem 1rem 0;
                 width: 50%;
                 height: 100%;
                 display: flex;
@@ -334,7 +337,7 @@ svg{
                     width: 100%;
                     p{
                         font-family: $font1; 
-                        margin: 1em 0;
+                        margin: 1rem 0;
                         i{
                           font-size: 2.7rem; 
                           text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); 
@@ -371,7 +374,7 @@ svg{
                     height:50%;
                     width: 80%;
                     opacity: 0;
-                    margin:1em;
+                    margin:1rem;
                     transition: opacity 1s ease-in-out;
                     .activeMap{
                         height: 100%;
@@ -386,13 +389,13 @@ svg{
                 .info-btn{
                     display: flex;
                     align-self: flex-end;
-                    margin: 2.5em 1em;
+                    margin: 2.5rem 1rem;
                     z-index: 2;
                     .show{
-                        padding:.1em;
-                        margin:0 .6em ;
-                        width:2.5em;
-                        height: 2.5em;
+                        padding:.1rem;
+                        margin:0 .6rem ;
+                        width:2.5rem;
+                        height: 2.5rem;
                         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                         border-radius: 8px;
                         display:flex;
@@ -435,6 +438,7 @@ svg{
 
 .fourth-section{
     height: 100vh;
+    min-height: 500px;
     background-color: white;
     opacity: 0.7;
     display: flex;
@@ -449,7 +453,7 @@ svg{
         height:fit-content;
         background-color: white;
         opacity: 0.85;
-        padding:1.5em 5%;
+        padding:1.5rem 5%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -460,10 +464,10 @@ svg{
             width: 100%; 
             text-align: center; 
             border-bottom: 3px solid #000; 
-            line-height: 0.1em;
-            margin: 3em 0 1em;
+            line-height: 0.1rem;
+            margin: 3rem 0 1rem;
             &:first-of-type{
-                margin-top: 1em;
+                margin-top: 1rem;
             }
             span { 
                 background:#fff; 
@@ -489,8 +493,8 @@ svg{
             width: 100%;
             .input-container{
                 width: 25%;
-                margin-right: 3em;
-                min-width: 5.5em;
+                margin-right: 3rem;
+                min-width: 5.5rem;
                 input{
                     text-align: center;
                 }
@@ -509,7 +513,7 @@ svg{
         }
         input, textarea{
             width: 100%;
-            height: 2em;
+            height: 2rem;
             font-family: $font1;
             font-weight: 300;
             font-size:.8rem;
@@ -530,10 +534,10 @@ svg{
             }
         }
         textarea{
-            height: 2.5em;
+            height: 2.5rem;
         }
         textarea:focus{
-            height: 4em;
+            height: 4rem;
         }
         input:focus, textarea:focus{
             ~ .label {
@@ -562,7 +566,7 @@ svg{
             background-color: rgb(255, 255, 255);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-            margin: 1.8em 2em 1.5em;
+            margin: 1.8rem 2rem 1.5rem;
             font-family: $font1;
             font-weight: 700;
             white-space: nowrap;
@@ -617,7 +621,7 @@ svg{
         min-width: 300px;
         height:70%;
         background-color: white;
-        padding:1.5em 5%;
+        padding:1.5rem 5%;
         display: none;
         transform: scaleX(0%) scaleY(0%);
         position: relative;
@@ -646,10 +650,10 @@ svg{
                 font-size: 1.5rem;
                 color: #b99796;
                 text-shadow:  3px 3px 3px rgba(0, 0, 0, 0.25);
-                margin:1em;
+                margin:1rem;
             }
             h2{
-                margin:1em;
+                margin:1rem;
                 font-size:1.2rem;
                 color: #a0b3b3;
                 text-shadow:  3px 3px 3px rgba(0, 0, 0, 0.25);
@@ -691,7 +695,7 @@ svg{
         
             .btn{
                 font-size: 1rem;
-                padding: .5em 1em;
+                padding: .5rem 1rem;
             }
         }
     }
@@ -708,7 +712,7 @@ svg{
             flex-direction: column;
             align-items: center;
             .description{
-                min-width:16em;  
+                min-width:16rem;  
             }  
         }
         .pink{
@@ -794,7 +798,7 @@ svg{
         background-image: url("../images/Love 45.jpg");
         .registration{
             width: 90%;
-            padding:1.5em 10%;
+            padding:1.5rem 10%;
         }
         .confirmation{
             width: 100%;

@@ -360,9 +360,7 @@ svg {
   font-size: 1.8rem;
   top: 5%;
   right: -17px;
-  width: 5.5rem;
-  height: 2rem;
-  line-height: 2.2rem;
+  padding: 0.5rem 1rem 0.3rem;
   color: #7c7c7a;
   letter-spacing: 1px;
   background-color: #f1faf9;
@@ -1119,6 +1117,18 @@ svg {
   }
   .fourth-section .confirmation .confirmation-text h2 {
     font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  html {
+    font-size: 1.8em;
+  }
+}
+
+@media (min-width: 3500px) {
+  html {
+    font-size: 3em;
   }
 }
 /*# sourceMappingURL=main.css.map */

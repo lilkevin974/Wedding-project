@@ -5,9 +5,9 @@ from main.models import Confirmation, TwilioSms
 
 
 class SmsAdmin(admin.ModelAdmin):
-    list_display = ('fullname', 'surname', 'number', 'category', 'status')
-    list_editable = ('number','category')
-    list_filter = ['category','status']
+    list_display = ('fullname', 'surname', 'number', 'category','sms','status')
+    list_editable = ('number','category','sms')
+    list_filter = ['category','sms','status']
 
     def fullname(self,obj):
         return "{} {}".format(obj.last_name, obj.first_name)

@@ -40,7 +40,7 @@ def index(request):
             f'Confirmation de {data["last_name"]} {data["first_name"]}',
             f'Confirmation :\nInvité : {data["last_name"]} {data["first_name"]}\nNombre d\'adultes : {data["adults"]}\nNombre d\'enfants : {data["children"]}\nMessage : {data["message"]}',
             'Annaëlle et Kévin <contact@annaelle-et-kevin.fr>',
-            ['lilkevin@hotmail.fr'],
+            ['lilkevin@hotmail.fr','a.jaguernate@hotmail.fr'],
             fail_silently=True,
         )
 

@@ -643,7 +643,7 @@ svg {
       -ms-flex-align: center;
           align-items: center;
   background-attachment: fixed;
-  background-image: url("../images/Love.jpg");
+  background-image: url("../images/Back.png");
   overflow-y: hidden;
 }
 
@@ -1102,7 +1102,7 @@ svg {
     margin: 30% 10%;
   }
   .fourth-section {
-    background-image: url("../images/Love 45.jpg");
+    background-image: url("../images/Back50.png");
   }
   .fourth-section .registration {
     width: 90%;

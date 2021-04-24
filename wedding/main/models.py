@@ -33,13 +33,13 @@ class TwilioSms(models.Model):
         auth_token = env('TWILIO_AUTH_TOKEN')
 
         client = Client(account_sid, auth_token)
-        if self.category == 'I1':
+        if self.sms == 'I1':
             client.api.account.messages.create(
                 to=f"{self.number}",
-                from_="+33757912708",
+                from_="AnnaEtKevin",
                 status_callback='http://www.annaelle-et-kevin.fr/sms/status',
                 body=f"Bonjour {self.surname},\n\nNous nous disons OUI!\nNous sommes heureux de vous convier à notre mariage qui aura lieu le 27 août 2021.\n\nPour plus d'informations et afin de confirmer votre présence avant le 31 mai, rendez-vous sur notre site www.annaelle-et-kevin.fr.\n\nAnnaëlle et Kévin\n0692018205")
-        elif self.category == 'I2':
+        elif self.sms == 'I2':
             client.api.account.messages.create(
                 to=f"{self.number}",
                 from_="KevinEtAnna",

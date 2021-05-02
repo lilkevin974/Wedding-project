@@ -133,10 +133,11 @@ svg{
     gap: 5rem;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    
     .info{
         display: flex;
         justify-content: space-around;
+        align-items: center;
         height: max-content;
         gap: 1rem;
         .description{

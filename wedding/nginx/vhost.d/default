@@ -3,3 +3,7 @@ location /static/ {
   add_header Access-Control-Allow-Origin *;
 }
 
+location /favicon.ico {
+    alias /home/app/web/static/favicon.ico;
+} 
+

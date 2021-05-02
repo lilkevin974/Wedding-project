@@ -5,5 +5,6 @@ location /static/ {
 
 location /favicon.ico {
     alias /home/app/web/static/favicon.ico;
+    add_header Access-Control-Allow-Origin *;
 } 
 
